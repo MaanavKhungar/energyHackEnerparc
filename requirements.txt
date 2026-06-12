@@ -1,4 +1,7 @@
+anthropic
 streamlit
 pandas
-numpy
+pyarrow
+openpyxl
+pymupdf
 plotly
