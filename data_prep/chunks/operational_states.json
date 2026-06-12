@@ -1,0 +1,522 @@
+[
+  {
+    "id": "opstate_INV_0101001",
+    "text": "Inverter INV 01.01.001 operational states: state 4 (unknown): 426,137 intervals, state 5 (unknown): 29,050 intervals, state 2 (unknown): 5,441 intervals, state 6 (unknown): 3,094 intervals, state 1 (unknown): 714 intervals, state 0 (Off/Night): 5 intervals. Total recorded intervals: 464,441.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.01.001"
+    }
+  },
+  {
+    "id": "opstate_INV_0101002",
+    "text": "Inverter INV 01.01.002 operational states: state 4 (unknown): 422,271 intervals, state 6 (unknown): 27,160 intervals, state 5 (unknown): 12,601 intervals, state 2 (unknown): 7,217 intervals, state 1 (unknown): 1,427 intervals, state 0 (Off/Night): 57 intervals. Total recorded intervals: 470,733.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.01.002"
+    }
+  },
+  {
+    "id": "opstate_INV_0101003",
+    "text": "Inverter INV 01.01.003 operational states: state 4 (unknown): 417,719 intervals, state 5 (unknown): 32,096 intervals, state 6 (unknown): 12,873 intervals, state 2 (unknown): 6,646 intervals, state 1 (unknown): 1,250 intervals, state 0 (Off/Night): 47 intervals. Total recorded intervals: 470,631.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.01.003"
+    }
+  },
+  {
+    "id": "opstate_INV_0101004",
+    "text": "Inverter INV 01.01.004 operational states: state 4 (unknown): 415,784 intervals, state 5 (unknown): 18,106 intervals, state 6 (unknown): 14,574 intervals, state 2 (unknown): 9,755 intervals, state 1 (unknown): 1,371 intervals, state 3 (unknown): 120 intervals, state 0 (Off/Night): 73 intervals. Total recorded intervals: 459,783.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.01.004"
+    }
+  },
+  {
+    "id": "opstate_INV_0101005",
+    "text": "Inverter INV 01.01.005 operational states: state 4 (unknown): 445,048 intervals, state 5 (unknown): 16,350 intervals, state 2 (unknown): 4,880 intervals, state 6 (unknown): 3,350 intervals, state 1 (unknown): 985 intervals, state 0 (Off/Night): 58 intervals. Total recorded intervals: 470,671.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.01.005"
+    }
+  },
+  {
+    "id": "opstate_INV_0101006",
+    "text": "Inverter INV 01.01.006 operational states: state 4 (unknown): 424,527 intervals, state 5 (unknown): 24,781 intervals, state 2 (unknown): 5,707 intervals, state 6 (unknown): 2,993 intervals, state 1 (unknown): 1,043 intervals, state 0 (Off/Night): 39 intervals. Total recorded intervals: 459,090.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.01.006"
+    }
+  },
+  {
+    "id": "opstate_INV_0101007",
+    "text": "Inverter INV 01.01.007 operational states: state 4 (unknown): 409,994 intervals, state 5 (unknown): 37,023 intervals, state 2 (unknown): 8,826 intervals, state 6 (unknown): 4,633 intervals, state 1 (unknown): 1,426 intervals, state 0 (Off/Night): 67 intervals. Total recorded intervals: 461,969.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.01.007"
+    }
+  },
+  {
+    "id": "opstate_INV_0102008",
+    "text": "Inverter INV 01.02.008 operational states: state 4 (unknown): 418,568 intervals, state 5 (unknown): 11,477 intervals, state 2 (unknown): 4,384 intervals, state 6 (unknown): 2,498 intervals, state 1 (unknown): 834 intervals, state 0 (Off/Night): 3 intervals. Total recorded intervals: 437,764.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.02.008"
+    }
+  },
+  {
+    "id": "opstate_INV_0102009",
+    "text": "Inverter INV 01.02.009 operational states: state 4 (unknown): 445,766 intervals, state 5 (unknown): 16,851 intervals, state 2 (unknown): 4,369 intervals, state 6 (unknown): 2,868 intervals, state 1 (unknown): 1,056 intervals, state 0 (Off/Night): 27 intervals. Total recorded intervals: 470,937.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.02.009"
+    }
+  },
+  {
+    "id": "opstate_INV_0102010",
+    "text": "Inverter INV 01.02.010 operational states: state 4 (unknown): 443,767 intervals, state 5 (unknown): 17,583 intervals, state 2 (unknown): 4,752 intervals, state 6 (unknown): 2,873 intervals, state 1 (unknown): 1,273 intervals, state 0 (Off/Night): 71 intervals. Total recorded intervals: 470,319.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.02.010"
+    }
+  },
+  {
+    "id": "opstate_INV_0102011",
+    "text": "Inverter INV 01.02.011 operational states: state 4 (unknown): 440,031 intervals, state 5 (unknown): 17,343 intervals, state 2 (unknown): 5,497 intervals, state 6 (unknown): 3,614 intervals, state 1 (unknown): 1,267 intervals, state 0 (Off/Night): 56 intervals. Total recorded intervals: 467,808.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.02.011"
+    }
+  },
+  {
+    "id": "opstate_INV_0102012",
+    "text": "Inverter INV 01.02.012 operational states: state 4 (unknown): 425,458 intervals, state 6 (unknown): 28,190 intervals, state 5 (unknown): 9,737 intervals, state 2 (unknown): 3,787 intervals, state 1 (unknown): 805 intervals, state 0 (Off/Night): 2 intervals. Total recorded intervals: 467,979.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.02.012"
+    }
+  },
+  {
+    "id": "opstate_INV_0102013",
+    "text": "Inverter INV 01.02.013 operational states: state 4 (unknown): 440,231 intervals, state 5 (unknown): 17,220 intervals, state 2 (unknown): 5,405 intervals, state 6 (unknown): 3,223 intervals, state 1 (unknown): 1,500 intervals, state 0 (Off/Night): 67 intervals. Total recorded intervals: 467,646.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.02.013"
+    }
+  },
+  {
+    "id": "opstate_INV_0102014",
+    "text": "Inverter INV 01.02.014 operational states: state 4 (unknown): 447,146 intervals, state 5 (unknown): 8,843 intervals, state 6 (unknown): 6,778 intervals, state 2 (unknown): 3,632 intervals, state 1 (unknown): 1,193 intervals, state 0 (Off/Night): 71 intervals. Total recorded intervals: 467,663.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.02.014"
+    }
+  },
+  {
+    "id": "opstate_INV_0103015",
+    "text": "Inverter INV 01.03.015 operational states: state 4 (unknown): 403,604 intervals, state 5 (unknown): 23,908 intervals, state 2 (unknown): 5,094 intervals, state 6 (unknown): 2,355 intervals, state 1 (unknown): 679 intervals, state 0 (Off/Night): 4 intervals. Total recorded intervals: 435,644.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.03.015"
+    }
+  },
+  {
+    "id": "opstate_INV_0103016",
+    "text": "Inverter INV 01.03.016 operational states: state 4 (unknown): 398,851 intervals, state 5 (unknown): 33,732 intervals, state 2 (unknown): 5,785 intervals, state 6 (unknown): 2,811 intervals, state 1 (unknown): 801 intervals, state 0 (Off/Night): 33 intervals. Total recorded intervals: 442,013.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.03.016"
+    }
+  },
+  {
+    "id": "opstate_INV_0103017",
+    "text": "Inverter INV 01.03.017 operational states: state 4 (unknown): 386,987 intervals, state 5 (unknown): 36,681 intervals, state 2 (unknown): 6,213 intervals, state 6 (unknown): 4,480 intervals, state 1 (unknown): 1,157 intervals, state 0 (Off/Night): 40 intervals, state 262152 (unknown): 1 intervals. Total recorded intervals: 435,559.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.03.017"
+    }
+  },
+  {
+    "id": "opstate_INV_0103018",
+    "text": "Inverter INV 01.03.018 operational states: state 4 (unknown): 412,304 intervals, state 5 (unknown): 16,817 intervals, state 2 (unknown): 5,971 intervals, state 6 (unknown): 3,484 intervals, state 1 (unknown): 1,457 intervals, state 0 (Off/Night): 57 intervals. Total recorded intervals: 440,090.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.03.018"
+    }
+  },
+  {
+    "id": "opstate_INV_0103019",
+    "text": "Inverter INV 01.03.019 operational states: state 4 (unknown): 418,538 intervals, state 5 (unknown): 15,535 intervals, state 2 (unknown): 4,354 intervals, state 6 (unknown): 2,354 intervals, state 1 (unknown): 644 intervals, state 0 (Off/Night): 7 intervals. Total recorded intervals: 441,432.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.03.019"
+    }
+  },
+  {
+    "id": "opstate_INV_0103020",
+    "text": "Inverter INV 01.03.020 operational states: state 4 (unknown): 414,355 intervals, state 5 (unknown): 16,583 intervals, state 2 (unknown): 6,060 intervals, state 6 (unknown): 3,137 intervals, state 1 (unknown): 1,421 intervals, state 0 (Off/Night): 52 intervals. Total recorded intervals: 441,608.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.03.020"
+    }
+  },
+  {
+    "id": "opstate_INV_0103021",
+    "text": "Inverter INV 01.03.021 operational states: state 4 (unknown): 417,393 intervals, state 5 (unknown): 16,818 intervals, state 2 (unknown): 4,307 intervals, state 6 (unknown): 2,411 intervals, state 1 (unknown): 1,054 intervals, state 0 (Off/Night): 36 intervals. Total recorded intervals: 442,019.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.03.021"
+    }
+  },
+  {
+    "id": "opstate_INV_0104022",
+    "text": "Inverter INV 01.04.022 operational states: state 4 (unknown): 405,299 intervals, state 5 (unknown): 26,375 intervals, state 6 (unknown): 4,307 intervals, state 2 (unknown): 3,071 intervals, state 1 (unknown): 787 intervals, state 0 (Off/Night): 30 intervals. Total recorded intervals: 439,869.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.04.022"
+    }
+  },
+  {
+    "id": "opstate_INV_0104023",
+    "text": "Inverter INV 01.04.023 operational states: state 4 (unknown): 409,442 intervals, state 5 (unknown): 13,947 intervals, state 6 (unknown): 3,642 intervals, state 2 (unknown): 2,701 intervals, state 1 (unknown): 1,038 intervals, state 0 (Off/Night): 58 intervals. Total recorded intervals: 430,828.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.04.023"
+    }
+  },
+  {
+    "id": "opstate_INV_0104024",
+    "text": "Inverter INV 01.04.024 operational states: state 4 (unknown): 427,359 intervals, state 5 (unknown): 7,816 intervals, state 6 (unknown): 2,323 intervals, state 2 (unknown): 2,124 intervals, state 1 (unknown): 847 intervals, state 0 (Off/Night): 45 intervals. Total recorded intervals: 440,514.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.04.024"
+    }
+  },
+  {
+    "id": "opstate_INV_0104025",
+    "text": "Inverter INV 01.04.025 operational states: state 4 (unknown): 411,730 intervals, state 5 (unknown): 18,001 intervals, state 2 (unknown): 3,401 intervals, state 6 (unknown): 2,435 intervals, state 1 (unknown): 1,443 intervals, state 0 (Off/Night): 60 intervals. Total recorded intervals: 437,070.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.04.025"
+    }
+  },
+  {
+    "id": "opstate_INV_0104026",
+    "text": "Inverter INV 01.04.026 operational states: state 4 (unknown): 427,857 intervals, state 6 (unknown): 5,296 intervals, state 5 (unknown): 4,823 intervals, state 2 (unknown): 2,378 intervals, state 1 (unknown): 497 intervals, state 0 (Off/Night): 37 intervals, state 262152 (unknown): 1 intervals. Total recorded intervals: 440,889.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.04.026"
+    }
+  },
+  {
+    "id": "opstate_INV_0104027",
+    "text": "Inverter INV 01.04.027 operational states: state 4 (unknown): 411,716 intervals, state 5 (unknown): 16,008 intervals, state 2 (unknown): 2,920 intervals, state 6 (unknown): 2,789 intervals, state 1 (unknown): 882 intervals, state 0 (Off/Night): 53 intervals. Total recorded intervals: 434,368.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.04.027"
+    }
+  },
+  {
+    "id": "opstate_INV_0104028",
+    "text": "Inverter INV 01.04.028 operational states: state 4 (unknown): 427,860 intervals, state 5 (unknown): 8,410 intervals, state 2 (unknown): 2,499 intervals, state 6 (unknown): 2,311 intervals, state 1 (unknown): 957 intervals, state 0 (Off/Night): 61 intervals. Total recorded intervals: 442,098.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.04.028"
+    }
+  },
+  {
+    "id": "opstate_INV_0105029",
+    "text": "Inverter INV 01.05.029 operational states: state 4 (unknown): 419,142 intervals, state 5 (unknown): 14,780 intervals, state 6 (unknown): 4,798 intervals, state 2 (unknown): 2,423 intervals, state 1 (unknown): 731 intervals, state 0 (Off/Night): 51 intervals. Total recorded intervals: 441,925.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.05.029"
+    }
+  },
+  {
+    "id": "opstate_INV_0105030",
+    "text": "Inverter INV 01.05.030 operational states: state 4 (unknown): 405,248 intervals, state 5 (unknown): 17,270 intervals, state 2 (unknown): 3,031 intervals, state 6 (unknown): 2,631 intervals, state 1 (unknown): 851 intervals, state 0 (Off/Night): 66 intervals. Total recorded intervals: 429,097.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.05.030"
+    }
+  },
+  {
+    "id": "opstate_INV_0105031",
+    "text": "Inverter INV 01.05.031 operational states: state 4 (unknown): 415,347 intervals, state 5 (unknown): 15,871 intervals, state 2 (unknown): 2,526 intervals, state 6 (unknown): 2,440 intervals, state 1 (unknown): 767 intervals, state 0 (Off/Night): 14 intervals. Total recorded intervals: 436,965.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.05.031"
+    }
+  },
+  {
+    "id": "opstate_INV_0105032",
+    "text": "Inverter INV 01.05.032 operational states: state 4 (unknown): 409,288 intervals, state 5 (unknown): 9,961 intervals, state 6 (unknown): 5,252 intervals, state 2 (unknown): 4,005 intervals, state 1 (unknown): 1,327 intervals, state 0 (Off/Night): 54 intervals. Total recorded intervals: 429,887.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.05.032"
+    }
+  },
+  {
+    "id": "opstate_INV_0105033",
+    "text": "Inverter INV 01.05.033 operational states: state 4 (unknown): 421,283 intervals, state 6 (unknown): 5,226 intervals, state 5 (unknown): 3,723 intervals, state 2 (unknown): 1,598 intervals, state 1 (unknown): 488 intervals, state 0 (Off/Night): 42 intervals. Total recorded intervals: 432,360.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.05.033"
+    }
+  },
+  {
+    "id": "opstate_INV_0105034",
+    "text": "Inverter INV 01.05.034 operational states: state 4 (unknown): 415,635 intervals, state 5 (unknown): 13,139 intervals, state 6 (unknown): 2,336 intervals, state 2 (unknown): 1,985 intervals, state 1 (unknown): 531 intervals, state 0 (Off/Night): 1 intervals. Total recorded intervals: 433,627.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.05.034"
+    }
+  },
+  {
+    "id": "opstate_INV_0105035",
+    "text": "Inverter INV 01.05.035 operational states: state 4 (unknown): 390,198 intervals, state 5 (unknown): 25,413 intervals, state 1 (unknown): 12,902 intervals, state 2 (unknown): 2,504 intervals, state 6 (unknown): 2,387 intervals, state 0 (Off/Night): 6 intervals. Total recorded intervals: 433,410.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.05.035"
+    }
+  },
+  {
+    "id": "opstate_INV_0106036",
+    "text": "Inverter INV 01.06.036 operational states: state 4 (unknown): 442,048 intervals, state 5 (unknown): 25,446 intervals, state 6 (unknown): 16,136 intervals, state 2 (unknown): 3,496 intervals, state 1 (unknown): 594 intervals, state 0 (Off/Night): 10 intervals. Total recorded intervals: 487,730.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.06.036"
+    }
+  },
+  {
+    "id": "opstate_INV_0106037",
+    "text": "Inverter INV 01.06.037 operational states: state 4 (unknown): 432,219 intervals, state 2 (unknown): 25,831 intervals, state 6 (unknown): 17,725 intervals, state 5 (unknown): 11,523 intervals, state 1 (unknown): 589 intervals, state 0 (Off/Night): 56 intervals. Total recorded intervals: 487,943.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.06.037"
+    }
+  },
+  {
+    "id": "opstate_INV_0106038",
+    "text": "Inverter INV 01.06.038 operational states: state 4 (unknown): 458,164 intervals, state 5 (unknown): 20,364 intervals, state 2 (unknown): 4,529 intervals, state 6 (unknown): 2,972 intervals, state 1 (unknown): 1,271 intervals, state 0 (Off/Night): 173 intervals. Total recorded intervals: 487,473.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.06.038"
+    }
+  },
+  {
+    "id": "opstate_INV_0106039",
+    "text": "Inverter INV 01.06.039 operational states: state 4 (unknown): 456,160 intervals, state 5 (unknown): 21,463 intervals, state 2 (unknown): 4,472 intervals, state 6 (unknown): 3,264 intervals, state 1 (unknown): 1,675 intervals, state 0 (Off/Night): 113 intervals. Total recorded intervals: 487,147.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.06.039"
+    }
+  },
+  {
+    "id": "opstate_INV_0106040",
+    "text": "Inverter INV 01.06.040 operational states: state 4 (unknown): 451,646 intervals, state 5 (unknown): 26,240 intervals, state 2 (unknown): 3,386 intervals, state 6 (unknown): 2,799 intervals, state 1 (unknown): 582 intervals, state 0 (Off/Night): 15 intervals. Total recorded intervals: 484,668.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.06.040"
+    }
+  },
+  {
+    "id": "opstate_INV_0106041",
+    "text": "Inverter INV 01.06.041 operational states: state 4 (unknown): 463,352 intervals, state 5 (unknown): 18,454 intervals, state 6 (unknown): 3,171 intervals, state 2 (unknown): 2,116 intervals, state 1 (unknown): 907 intervals, state 0 (Off/Night): 46 intervals. Total recorded intervals: 488,046.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.06.041"
+    }
+  },
+  {
+    "id": "opstate_INV_0106042",
+    "text": "Inverter INV 01.06.042 operational states: state 4 (unknown): 459,468 intervals, state 5 (unknown): 18,540 intervals, state 2 (unknown): 5,748 intervals, state 6 (unknown): 2,782 intervals, state 1 (unknown): 1,145 intervals, state 0 (Off/Night): 32 intervals, state 3 (unknown): 1 intervals. Total recorded intervals: 487,716.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.06.042"
+    }
+  },
+  {
+    "id": "opstate_INV_0106043",
+    "text": "Inverter INV 01.06.043 operational states: state 4 (unknown): 458,372 intervals, state 5 (unknown): 19,362 intervals, state 2 (unknown): 5,489 intervals, state 6 (unknown): 2,874 intervals, state 1 (unknown): 1,184 intervals, state 0 (Off/Night): 64 intervals. Total recorded intervals: 487,345.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.06.043"
+    }
+  },
+  {
+    "id": "opstate_INV_0107044",
+    "text": "Inverter INV 01.07.044 operational states: state 4 (unknown): 469,407 intervals, state 5 (unknown): 10,699 intervals, state 6 (unknown): 4,941 intervals, state 2 (unknown): 2,297 intervals, state 1 (unknown): 588 intervals, state 0 (Off/Night): 29 intervals. Total recorded intervals: 487,961.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.07.044"
+    }
+  },
+  {
+    "id": "opstate_INV_0107045",
+    "text": "Inverter INV 01.07.045 operational states: state 4 (unknown): 465,903 intervals, state 5 (unknown): 13,179 intervals, state 6 (unknown): 2,764 intervals, state 2 (unknown): 2,522 intervals, state 1 (unknown): 1,592 intervals, state 0 (Off/Night): 33 intervals. Total recorded intervals: 485,993.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.07.045"
+    }
+  },
+  {
+    "id": "opstate_INV_0107046",
+    "text": "Inverter INV 01.07.046 operational states: state 4 (unknown): 465,315 intervals, state 5 (unknown): 15,138 intervals, state 6 (unknown): 3,182 intervals, state 2 (unknown): 2,575 intervals, state 1 (unknown): 950 intervals, state 0 (Off/Night): 45 intervals. Total recorded intervals: 487,205.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.07.046"
+    }
+  },
+  {
+    "id": "opstate_INV_0107047",
+    "text": "Inverter INV 01.07.047 operational states: state 4 (unknown): 461,622 intervals, state 5 (unknown): 16,862 intervals, state 6 (unknown): 3,274 intervals, state 2 (unknown): 2,931 intervals, state 1 (unknown): 975 intervals, state 0 (Off/Night): 59 intervals. Total recorded intervals: 485,723.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.07.047"
+    }
+  },
+  {
+    "id": "opstate_INV_0107048",
+    "text": "Inverter INV 01.07.048 operational states: state 4 (unknown): 459,485 intervals, state 5 (unknown): 11,300 intervals, state 6 (unknown): 3,115 intervals, state 2 (unknown): 2,873 intervals, state 1 (unknown): 1,108 intervals, state 0 (Off/Night): 25 intervals. Total recorded intervals: 477,906.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.07.048"
+    }
+  },
+  {
+    "id": "opstate_INV_0107049",
+    "text": "Inverter INV 01.07.049 operational states: state 4 (unknown): 465,309 intervals, state 5 (unknown): 13,489 intervals, state 6 (unknown): 3,649 intervals, state 2 (unknown): 2,075 intervals, state 1 (unknown): 456 intervals, state 0 (Off/Night): 1 intervals. Total recorded intervals: 484,979.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.07.049"
+    }
+  },
+  {
+    "id": "opstate_INV_0107050",
+    "text": "Inverter INV 01.07.050 operational states: state 4 (unknown): 467,281 intervals, state 5 (unknown): 13,294 intervals, state 6 (unknown): 2,972 intervals, state 2 (unknown): 2,374 intervals, state 1 (unknown): 1,280 intervals, state 0 (Off/Night): 42 intervals. Total recorded intervals: 487,243.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.07.050"
+    }
+  },
+  {
+    "id": "opstate_INV_0107051",
+    "text": "Inverter INV 01.07.051 operational states: state 4 (unknown): 465,269 intervals, state 5 (unknown): 15,154 intervals, state 6 (unknown): 2,814 intervals, state 2 (unknown): 2,454 intervals, state 1 (unknown): 1,302 intervals, state 0 (Off/Night): 46 intervals. Total recorded intervals: 487,039.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.07.051"
+    }
+  },
+  {
+    "id": "opstate_INV_0108052",
+    "text": "Inverter INV 01.08.052 operational states: state 4 (unknown): 442,847 intervals, state 5 (unknown): 14,667 intervals, state 2 (unknown): 2,813 intervals, state 6 (unknown): 2,271 intervals, state 1 (unknown): 1,110 intervals, state 0 (Off/Night): 4 intervals. Total recorded intervals: 463,712.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.08.052"
+    }
+  },
+  {
+    "id": "opstate_INV_0108053",
+    "text": "Inverter INV 01.08.053 operational states: state 4 (unknown): 426,140 intervals, state 6 (unknown): 17,815 intervals, state 5 (unknown): 14,722 intervals, state 2 (unknown): 3,345 intervals, state 1 (unknown): 1,422 intervals, state 0 (Off/Night): 26 intervals, state 3 (unknown): 1 intervals. Total recorded intervals: 463,471.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.08.053"
+    }
+  },
+  {
+    "id": "opstate_INV_0108054",
+    "text": "Inverter INV 01.08.054 operational states: state 4 (unknown): 445,789 intervals, state 5 (unknown): 12,102 intervals, state 2 (unknown): 2,495 intervals, state 6 (unknown): 2,447 intervals, state 1 (unknown): 999 intervals, state 0 (Off/Night): 36 intervals. Total recorded intervals: 463,868.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.08.054"
+    }
+  },
+  {
+    "id": "opstate_INV_0108055",
+    "text": "Inverter INV 01.08.055 operational states: state 4 (unknown): 440,309 intervals, state 5 (unknown): 13,163 intervals, state 6 (unknown): 3,931 intervals, state 2 (unknown): 3,078 intervals, state 1 (unknown): 1,050 intervals, state 0 (Off/Night): 70 intervals, state 3 (unknown): 1 intervals. Total recorded intervals: 461,602.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.08.055"
+    }
+  },
+  {
+    "id": "opstate_INV_0108056",
+    "text": "Inverter INV 01.08.056 operational states: state 4 (unknown): 441,068 intervals, state 5 (unknown): 15,505 intervals, state 2 (unknown): 2,870 intervals, state 6 (unknown): 2,271 intervals, state 1 (unknown): 1,323 intervals, state 0 (Off/Night): 77 intervals. Total recorded intervals: 463,114.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.08.056"
+    }
+  },
+  {
+    "id": "opstate_INV_0108057",
+    "text": "Inverter INV 01.08.057 operational states: state 4 (unknown): 411,406 intervals, state 5 (unknown): 23,613 intervals, state 6 (unknown): 21,642 intervals, state 2 (unknown): 3,817 intervals, state 1 (unknown): 1,161 intervals, state 0 (Off/Night): 73 intervals. Total recorded intervals: 461,712.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.08.057"
+    }
+  },
+  {
+    "id": "opstate_INV_0108058",
+    "text": "Inverter INV 01.08.058 operational states: state 4 (unknown): 396,937 intervals, state 6 (unknown): 48,549 intervals, state 5 (unknown): 12,769 intervals, state 2 (unknown): 2,760 intervals, state 1 (unknown): 1,817 intervals, state 0 (Off/Night): 5 intervals. Total recorded intervals: 462,837.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.08.058"
+    }
+  },
+  {
+    "id": "opstate_INV_0108059",
+    "text": "Inverter INV 01.08.059 operational states: state 4 (unknown): 440,853 intervals, state 5 (unknown): 15,858 intervals, state 2 (unknown): 3,045 intervals, state 6 (unknown): 2,920 intervals, state 1 (unknown): 995 intervals, state 0 (Off/Night): 55 intervals. Total recorded intervals: 463,726.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.08.059"
+    }
+  },
+  {
+    "id": "opstate_INV_0109060",
+    "text": "Inverter INV 01.09.060 operational states: state 4 (unknown): 421,502 intervals, state 5 (unknown): 20,199 intervals, state 6 (unknown): 14,564 intervals, state 2 (unknown): 3,352 intervals, state 1 (unknown): 700 intervals, state 0 (Off/Night): 8 intervals. Total recorded intervals: 460,325.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.09.060"
+    }
+  },
+  {
+    "id": "opstate_INV_0109061",
+    "text": "Inverter INV 01.09.061 operational states: state 4 (unknown): 442,271 intervals, state 0 (Off/Night): 12,003 intervals, state 5 (unknown): 4,100 intervals, state 6 (unknown): 2,291 intervals, state 2 (unknown): 1,765 intervals, state 1 (unknown): 743 intervals. Total recorded intervals: 463,173.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.09.061"
+    }
+  },
+  {
+    "id": "opstate_INV_0109062",
+    "text": "Inverter INV 01.09.062 operational states: state 4 (unknown): 379,603 intervals, state 6 (unknown): 46,773 intervals, state 5 (unknown): 16,598 intervals, state 0 (Off/Night): 9,244 intervals, state 2 (unknown): 3,130 intervals, state 1 (unknown): 1,241 intervals. Total recorded intervals: 456,589.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.09.062"
+    }
+  },
+  {
+    "id": "opstate_INV_0109063",
+    "text": "Inverter INV 01.09.063 operational states: state 4 (unknown): 435,084 intervals, state 5 (unknown): 16,773 intervals, state 2 (unknown): 3,285 intervals, state 6 (unknown): 2,098 intervals, state 1 (unknown): 1,292 intervals, state 0 (Off/Night): 55 intervals. Total recorded intervals: 458,587.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.09.063"
+    }
+  },
+  {
+    "id": "opstate_INV_0109064",
+    "text": "Inverter INV 01.09.064 operational states: state 4 (unknown): 436,960 intervals, state 5 (unknown): 16,805 intervals, state 2 (unknown): 3,086 intervals, state 6 (unknown): 2,155 intervals, state 1 (unknown): 759 intervals, state 0 (Off/Night): 5 intervals. Total recorded intervals: 459,770.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.09.064"
+    }
+  },
+  {
+    "id": "opstate_INV_0109065",
+    "text": "Inverter INV 01.09.065 operational states: state 4 (unknown): 420,501 intervals, state 5 (unknown): 16,029 intervals, state 2 (unknown): 3,338 intervals, state 6 (unknown): 2,922 intervals, state 1 (unknown): 986 intervals, state 0 (Off/Night): 50 intervals. Total recorded intervals: 443,826.",
+    "metadata": {
+      "source": "operational_states",
+      "inverter": "INV 01.09.065"
+    }
+  }
+]

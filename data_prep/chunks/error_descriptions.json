@@ -1,0 +1,652 @@
+[
+  {
+    "id": "errorcode_0",
+    "text": "Error code 0 (decimal: 0) for component 'Inverter': Fehler wurde eventuell quittiert, obwohl dies nicht zul\u00e4ssigwar. Fehlerursprung kann so nicht nachvollzogen werden.",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0",
+      "decimal_code": "0",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0001",
+    "text": "Error code 0A0001 (decimal: 655361) for component 'Inverter': Hochsetzsteller des positiven Zwischenkreis konnte nicht ausreichend regeln",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0001",
+      "decimal_code": "655361",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0002",
+    "text": "Error code 0A0002 (decimal: 655362) for component 'Inverter': Hochsetzsteller des positiven Zwischenkreis konnte nicht ausreichend regeln",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0002",
+      "decimal_code": "655362",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0003",
+    "text": "Error code 0A0003 (decimal: 655363) for component 'Inverter': Asymmetrie im Zwischenkreis low",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0003",
+      "decimal_code": "655363",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0004",
+    "text": "Error code 0A0004 (decimal: 655364) for component 'Inverter': Asymmetrie im Zwischenkreis low",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0004",
+      "decimal_code": "655364",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0005",
+    "text": "Error code 0A0005 (decimal: 655365) for component 'Inverter': Absinken des positiven Zwischenkreises unter Netzscheitelwert",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0005",
+      "decimal_code": "655365",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0006",
+    "text": "Error code 0A0006 (decimal: 655366) for component 'Inverter': Absinken des positiven Zwischenkreises unter Netzscheitelwert",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0006",
+      "decimal_code": "655366",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0007",
+    "text": "Error code 0A0007 (decimal: 655367) for component 'Inverter': Absinken der positiven Zwischenkreisspannung unter Grenzwert P0024.0",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0007",
+      "decimal_code": "655367",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0008",
+    "text": "Error code 0A0008 (decimal: 655368) for component 'Inverter': \u00dcberschreiten der positiven Zwischenkreisspannung \u00fcber Grenzwert P0024.1",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0008",
+      "decimal_code": "655368",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0009",
+    "text": "Error code 0A0009 (decimal: 655369) for component 'Inverter': Absinken der negativen Zwischenkreisspan-nung unter Grenzwert P0024.0",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0009",
+      "decimal_code": "655369",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A000A",
+    "text": "Error code 0A000A (decimal: 655370) for component 'Inverter': \u00dcberschreiten der negativen Zwischenkreis-spannung \u00fcber Grenzwert P0024.1",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A000A",
+      "decimal_code": "655370",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A000B",
+    "text": "Error code 0A000B (decimal: 655371) for component 'Inverter': \u00dcberschreiten der positiven hochgesetzten Zwischenkreisspannung \u00fcber Grenzwert P0024.1",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A000B",
+      "decimal_code": "655371",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A000C",
+    "text": "Error code 0A000C (decimal: 655372) for component 'Inverter': \u00dcberschreiten der negativen hochgesetzten Zwischenkreisspannung \u00fcber Grenzwert P0024.1",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A000C",
+      "decimal_code": "655372",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A000D",
+    "text": "Error code 0A000D (decimal: 655373) for component 'Inverter': Erkennung von Netz\u00fcberspannung (ENS,Steuerteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A000D",
+      "decimal_code": "655373",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A000E",
+    "text": "Error code 0A000E (decimal: 655374) for component 'Inverter': Erkennung von Netzunterspannung (ENS,Steuerteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A000E",
+      "decimal_code": "655374",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A000F",
+    "text": "Error code 0A000F (decimal: 655375) for component 'Inverter': Erkennung von Netz\u00fcberspannung auf dem Au\u00dfenleiter (ENS,Steuerteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A000F",
+      "decimal_code": "655375",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0010",
+    "text": "Error code 0A0010 (decimal: 655376) for component 'Inverter': Erkennung von Netzunterspannung auf dem Au\u00dfenleiter (ENS,Steuerteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0010",
+      "decimal_code": "655376",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0011",
+    "text": "Error code 0A0011 (decimal: 655377) for component 'Inverter': Erkennung eines Netzfehlers (ENS,Steuerteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0011",
+      "decimal_code": "655377",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0012",
+    "text": "Error code 0A0012 (decimal: 655378) for component 'Inverter': Erkennung eines Netzfrequenzfehlers (ENS,Steuerteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0012",
+      "decimal_code": "655378",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0013",
+    "text": "Error code 0A0013 (decimal: 655379) for component 'Inverter': Bei der automatischen Isolationspr\u00fcfung der Anlage wurde ein Isolationsfehler festgestellt (ENS,Steuerteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0013",
+      "decimal_code": "655379",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0014",
+    "text": "Error code 0A0014 (decimal: 655380) for component 'Inverter': L\u00e4ndercode ist nicht eingestellt",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0014",
+      "decimal_code": "655380",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0016",
+    "text": "Error code 0A0016 (decimal: 655382) for component 'Inverter': Erkennung einer Unterschreitung der Netzfrequenz.",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0016",
+      "decimal_code": "655382",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0017",
+    "text": "Error code 0A0017 (decimal: 655383) for component 'Inverter': Ung\u00fcltiger L\u00e4ndercode",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0017",
+      "decimal_code": "655383",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0018",
+    "text": "Error code 0A0018 (decimal: 655384) for component 'Inverter': Die Netznennspannung lag zu\nlange \u00fcber dem Grenzwert der\nSpannungs-Mittelwert\u00dcberwachung.",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0018",
+      "decimal_code": "655384",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0019",
+    "text": "Error code 0A0019 (decimal: 655385) for component 'Inverter': Die Netznennspannung lag zu\nlange unter dem Grenzwert\nder Spannungs-Mittelwert\u00dcberwachung.",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0019",
+      "decimal_code": "655385",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0100",
+    "text": "Error code 0A0100 (decimal: 655616) for component 'Inverter': St\u00f6rmeldung vom Leistungsteil",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0100",
+      "decimal_code": "655616",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0102",
+    "text": "Error code 0A0102 (decimal: 655618) for component 'Inverter': \u00dcbertemperatur des rechten K\u00fchlerteils oberhalb Grenzwert P0027.3",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0102",
+      "decimal_code": "655618",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0103",
+    "text": "Error code 0A0103 (decimal: 655619) for component 'Inverter': \u00dcbertemperatur des Innenraums ( Messf\u00fchler Innenraum oben links ) oberhalb Grenzwert P0027.3",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0103",
+      "decimal_code": "655619",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0104",
+    "text": "Error code 0A0104 (decimal: 655620) for component 'Inverter': \u00dcbertemperatur des Innenraums ( Messf\u00fchler Innenraum unten rechts ) oberhalb Grenzwert P0027.3",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0104",
+      "decimal_code": "655620",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0105",
+    "text": "Error code 0A0105 (decimal: 655621) for component 'Inverter': \u00dcbertemperatur des linken K\u00fchlerteils oberhalb Grenzwert P0027.3",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0105",
+      "decimal_code": "655621",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0106",
+    "text": "Error code 0A0106 (decimal: 655622) for component 'Inverter': Steuerspannung im Leistungsteil ist fehlerhaft",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0106",
+      "decimal_code": "655622",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0108",
+    "text": "Error code 0A0108 (decimal: 655624) for component 'Inverter': Erkennung eines Netzfrequenzfehlers (ENS,Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0108",
+      "decimal_code": "655624",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0109",
+    "text": "Error code 0A0109 (decimal: 655625) for component 'Inverter': Erkennung von Netz\u00fcberspannung (ENS,Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0109",
+      "decimal_code": "655625",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A010A",
+    "text": "Error code 0A010A (decimal: 655626) for component 'Inverter': Erkennung von Netzunterspannung (ENS,Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A010A",
+      "decimal_code": "655626",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A010B",
+    "text": "Error code 0A010B (decimal: 655627) for component 'Inverter': reservierte Fehler Meldung",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A010B",
+      "decimal_code": "655627",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A010C",
+    "text": "Error code 0A010C (decimal: 655628) for component 'Inverter': Bei der automatischen Isolationspr\u00fcfung der Anlage wurde ein Isolationsfehler festgestellt (ENS,Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A010C",
+      "decimal_code": "655628",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A010D",
+    "text": "Error code 0A010D (decimal: 655629) for component 'Inverter': Fehlerstromerkennung (ENS,Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A010D",
+      "decimal_code": "655629",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A010E",
+    "text": "Error code 0A010E (decimal: 655630) for component 'Inverter': \u00dcberlastabschaltung im Leistungsteils",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A010E",
+      "decimal_code": "655630",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A010F",
+    "text": "Error code 0A010F (decimal: 655631) for component 'Inverter': reservierte Fehler Meldung",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A010F",
+      "decimal_code": "655631",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0110",
+    "text": "Error code 0A0110 (decimal: 655632) for component 'Inverter': \u00dcberspannungabschaltung im positiven Zwischenkreis (Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0110",
+      "decimal_code": "655632",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0111",
+    "text": "Error code 0A0111 (decimal: 655633) for component 'Inverter': \u00dcberspannungabschaltung im negativen Zwischenkreis (Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0111",
+      "decimal_code": "655633",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0112",
+    "text": "Error code 0A0112 (decimal: 655634) for component 'Inverter': reservierte Fehler Meldung",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0112",
+      "decimal_code": "655634",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0113",
+    "text": "Error code 0A0113 (decimal: 655635) for component 'Inverter': Kodierung Einsatzland und Subkodierung Einsatzland passen nicht zusammen",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0113",
+      "decimal_code": "655635",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0114",
+    "text": "Error code 0A0114 (decimal: 655636) for component 'Inverter': Bei der automatischen Isolationspr\u00fcfung der Anlage wurde ein Isolationsfehler festgestellt (ENS,Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0114",
+      "decimal_code": "655636",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0115",
+    "text": "Error code 0A0115 (decimal: 655637) for component 'Inverter': Bei der automatischen Isolationspr\u00fcfung der Anlage wurde ein Isolationsfehler festgestellt (ENS,Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0115",
+      "decimal_code": "655637",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0116",
+    "text": "Error code 0A0116 (decimal: 655638) for component 'Inverter': reservierte Fehler Meldung",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0116",
+      "decimal_code": "655638",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0117",
+    "text": "Error code 0A0117 (decimal: 655639) for component 'Inverter': Isolations-Pr\u00fcfeinheit defekt",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0117",
+      "decimal_code": "655639",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0118",
+    "text": "Error code 0A0118 (decimal: 655640) for component 'Inverter': Offsetabgleich des Leistungsteils lagen au\u00dferhalb der Grenzen",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0118",
+      "decimal_code": "655640",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A0119",
+    "text": "Error code 0A0119 (decimal: 655641) for component 'Inverter': Ausfall der Stromsensoren im Leitungsteil erkannt",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A0119",
+      "decimal_code": "655641",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A011A",
+    "text": "Error code 0A011A (decimal: 655642) for component 'Inverter': Ausfall eines Leistungszweiges im Hochsetzsteller erkannt",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A011A",
+      "decimal_code": "655642",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A011B",
+    "text": "Error code 0A011B (decimal: 655643) for component 'Inverter': Absinken der Zwischenkreisspannung unter Grenzwert P0024.0 (Leistungsteil)",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A011B",
+      "decimal_code": "655643",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A011C",
+    "text": "Error code 0A011C (decimal: 655644) for component 'Inverter': Sollwert f\u00fcr Zwischenkreis-Symmetrierung fehlerhaft",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A011C",
+      "decimal_code": "655644",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A011D",
+    "text": "Error code 0A011D (decimal: 655645) for component 'Inverter': Zeit\u00fcberschreitung Zwischenkreise-Symmetrierung",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A011D",
+      "decimal_code": "655645",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A011E",
+    "text": "Error code 0A011E (decimal: 655646) for component 'Inverter': Zeit\u00fcberschreitung Zwischenkreis-Vorladung",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A011E",
+      "decimal_code": "655646",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0A011F",
+    "text": "Error code 0A011F (decimal: 655647) for component 'Inverter': Fehlerhafter Lese- oder\nSchreibvorgang im Leistungsteil-Speicher.",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0A011F",
+      "decimal_code": "655647",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0x0A0120",
+    "text": "Error code 0x0A0120 (decimal: 655648) for component 'Inverter': Kommunikationsproblem zwischen Steuerung und Leistungsteil",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0x0A0120",
+      "decimal_code": "655648",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0x0A0121",
+    "text": "Error code 0x0A0121 (decimal: 655649) for component 'Inverter': DC-Strom in AC-Einspeisung",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0x0A0121",
+      "decimal_code": "655649",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0x0A200D",
+    "text": "Error code 0x0A200D (decimal: 663565) for component 'Inverter': Temperatur im Ger\u00e4t zu hoch",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0x0A200D",
+      "decimal_code": "663565",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_100001",
+    "text": "Error code 100001 (decimal: 1048577) for component 'Inverter': Ethernetverbindungsaufbau fehlgeschlagen",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "100001",
+      "decimal_code": "1048577",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_100002",
+    "text": "Error code 100002 (decimal: 1048578) for component 'Inverter': Verbindungsabbruch Ethernet",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "100002",
+      "decimal_code": "1048578",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_100003",
+    "text": "Error code 100003 (decimal: 1048579) for component 'Inverter': Es ist keine 100Mbit/s Ethernetverbindung",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "100003",
+      "decimal_code": "1048579",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_0x0D0001",
+    "text": "Error code 0x0D0001 (decimal: 851969) for component 'Inverter': Systemfehler",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "0x0D0001",
+      "decimal_code": "851969",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_4",
+    "text": "Error code 4 (decimal: 4) for component 'Inverter': #keine Beschreibung gefunden, scheint aber normaler Runstate zu sein",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "4",
+      "decimal_code": "4",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_2",
+    "text": "Error code 2 (decimal: 2) for component 'Inverter': #keine Beschreibung gefunden, scheint aber Starting oder Standby zu sein",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "2",
+      "decimal_code": "2",
+      "component": "Inverter"
+    }
+  },
+  {
+    "id": "errorcode_1",
+    "text": "Error code 1 (decimal: 1) for component 'Inverter': #keine Beschreibung gefunden, scheint aber Starting oder Standby zu sein",
+    "metadata": {
+      "source": "error_descriptions",
+      "hex_code": "1",
+      "decimal_code": "1",
+      "component": "Inverter"
+    }
+  }
+]

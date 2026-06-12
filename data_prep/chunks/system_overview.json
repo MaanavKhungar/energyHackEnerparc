@@ -1,0 +1,604 @@
+[
+  {
+    "id": "plant_overview",
+    "text": "Plant A is a solar PV plant named 'Example Plant'. Total system power: unknown kWp. Total modules: unknown. Total strings: unknown. Module type: Module Type 1 (255W per module, Manufacturer 1). Each inverter has 5 strings with 24 modules each (30.6 kWp per inverter).",
+    "metadata": {
+      "source": "system_overview",
+      "type": "plant_summary"
+    }
+  },
+  {
+    "id": "inverter_WR_01_01_001",
+    "text": "Inverter WR 01 .01 .001 is located at row A.019. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .01 .001"
+    }
+  },
+  {
+    "id": "inverter_WR_01_01_002",
+    "text": "Inverter WR 01 .01 .002 is located at row A.019. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .01 .002"
+    }
+  },
+  {
+    "id": "inverter_WR_01_01_003",
+    "text": "Inverter WR 01 .01 .003 is located at row A.019. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .01 .003"
+    }
+  },
+  {
+    "id": "inverter_WR_01_01_004",
+    "text": "Inverter WR 01 .01 .004 is located at row A.019. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .01 .004"
+    }
+  },
+  {
+    "id": "inverter_WR_01_01_00402",
+    "text": "Inverter WR 01 .01. 004.02 is located at row A.019. Capacity: 280 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .01. 004.02"
+    }
+  },
+  {
+    "id": "inverter_WR_01_01_005",
+    "text": "Inverter WR 01 .01 .005 is located at row A.019. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .01 .005"
+    }
+  },
+  {
+    "id": "inverter_WR_01_01_006",
+    "text": "Inverter WR 01 .01 .006 is located at row A.019. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .01 .006"
+    }
+  },
+  {
+    "id": "inverter_WR_01_01_007",
+    "text": "Inverter WR 01 .01 .007 is located at row A.019. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .01 .007"
+    }
+  },
+  {
+    "id": "inverter_WR_01_02_008",
+    "text": "Inverter WR 01 .02 .008 is located at row A.014. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .02 .008"
+    }
+  },
+  {
+    "id": "inverter_WR_01_02_009",
+    "text": "Inverter WR 01 .02 .009 is located at row A.014. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .02 .009"
+    }
+  },
+  {
+    "id": "inverter_WR_01_02_010",
+    "text": "Inverter WR 01 .02 .010 is located at row A.014. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .02 .010"
+    }
+  },
+  {
+    "id": "inverter_WR_01_02_011",
+    "text": "Inverter WR 01 .02 .011 is located at row A.014. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .02 .011"
+    }
+  },
+  {
+    "id": "inverter_WR_01_02_012",
+    "text": "Inverter WR 01 .02 .012 is located at row A.014. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .02 .012"
+    }
+  },
+  {
+    "id": "inverter_WR_01_02_013",
+    "text": "Inverter WR 01 .02 .013 is located at row A.014. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .02 .013"
+    }
+  },
+  {
+    "id": "inverter_WR_01_02_014",
+    "text": "Inverter WR 01 .02 .014 is located at row A.014. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .02 .014"
+    }
+  },
+  {
+    "id": "inverter_WR_01_03_015",
+    "text": "Inverter WR 01 .03 .015 is located at row A.010. Capacity: 250 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .03 .015"
+    }
+  },
+  {
+    "id": "inverter_WR_01_03_016",
+    "text": "Inverter WR 01 .03 .016 is located at row A.010. Capacity: 250 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .03 .016"
+    }
+  },
+  {
+    "id": "inverter_WR_01_03_017",
+    "text": "Inverter WR 01 .03 .017 is located at row A.010. Capacity: 250 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .03 .017"
+    }
+  },
+  {
+    "id": "inverter_WR_01_03_018",
+    "text": "Inverter WR 01 .03 .018 is located at row A.010. Capacity: 250 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .03 .018"
+    }
+  },
+  {
+    "id": "inverter_WR_01_03_019",
+    "text": "Inverter WR 01 .03 .019 is located at row A.010. Capacity: 250 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .03 .019"
+    }
+  },
+  {
+    "id": "inverter_WR_01_03_020",
+    "text": "Inverter WR 01 .03 .020 is located at row A.010. Capacity: 250 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .03 .020"
+    }
+  },
+  {
+    "id": "inverter_WR_01_03_021",
+    "text": "Inverter WR 01 .03 .021 is located at row A.010. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .03 .021"
+    }
+  },
+  {
+    "id": "inverter_WR_01_04_022",
+    "text": "Inverter WR 01 .04 .022 is located at row A.007. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .04 .022"
+    }
+  },
+  {
+    "id": "inverter_WR_01_04_023",
+    "text": "Inverter WR 01 .04 .023 is located at row A.007. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .04 .023"
+    }
+  },
+  {
+    "id": "inverter_WR_01_04_024",
+    "text": "Inverter WR 01 .04 .024 is located at row A.007. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .04 .024"
+    }
+  },
+  {
+    "id": "inverter_WR_01_04_025",
+    "text": "Inverter WR 01 .04 .025 is located at row A.007. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .04 .025"
+    }
+  },
+  {
+    "id": "inverter_WR_01_04_026",
+    "text": "Inverter WR 01 .04 .026 is located at row A.007. Capacity: 250 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .04 .026"
+    }
+  },
+  {
+    "id": "inverter_WR_01_04_027",
+    "text": "Inverter WR 01 .04 .027 is located at row A.007. Capacity: 245 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .04 .027"
+    }
+  },
+  {
+    "id": "inverter_WR_01_04_028",
+    "text": "Inverter WR 01 .04 .028 is located at row A.007. Capacity: 245 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .04 .028"
+    }
+  },
+  {
+    "id": "inverter_WR_01_05_029",
+    "text": "Inverter WR 01 .05 .029 is located at row A.004. Capacity: 240 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .05 .029"
+    }
+  },
+  {
+    "id": "inverter_WR_01_05_030",
+    "text": "Inverter WR 01 .05 .030 is located at row A.004. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .05 .030"
+    }
+  },
+  {
+    "id": "inverter_WR_01_05_031",
+    "text": "Inverter WR 01 .05 .031 is located at row A.004. Capacity: 240 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .05 .031"
+    }
+  },
+  {
+    "id": "inverter_WR_01_05_032",
+    "text": "Inverter WR 01 .05 .032 is located at row A.004. Capacity: 245 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .05 .032"
+    }
+  },
+  {
+    "id": "inverter_WR_01_05_033",
+    "text": "Inverter WR 01 .05 .033 is located at row A.004. Capacity: 285 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .05 .033"
+    }
+  },
+  {
+    "id": "inverter_WR_01_05_034",
+    "text": "Inverter WR 01 .05 .034 is located at row A.004. Capacity: 245 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .05 .034"
+    }
+  },
+  {
+    "id": "inverter_WR_01_05_035",
+    "text": "Inverter WR 01 .05 .035 is located at row A.004. Capacity: 245 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .05 .035"
+    }
+  },
+  {
+    "id": "inverter_WR_01_06_036",
+    "text": "Inverter WR 01 .06 .036 is located at row B.018. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .06 .036"
+    }
+  },
+  {
+    "id": "inverter_WR_01_06_037",
+    "text": "Inverter WR 01 .06 .037 is located at row B.018. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .06 .037"
+    }
+  },
+  {
+    "id": "inverter_WR_01_06_038",
+    "text": "Inverter WR 01 .06 .038 is located at row B.018. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .06 .038"
+    }
+  },
+  {
+    "id": "inverter_WR_01_06_039",
+    "text": "Inverter WR 01 .06 .039 is located at row B.018. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .06 .039"
+    }
+  },
+  {
+    "id": "inverter_WR_01_06_040",
+    "text": "Inverter WR 01 .06 .040 is located at row B.018. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .06 .040"
+    }
+  },
+  {
+    "id": "inverter_WR_01_06_041",
+    "text": "Inverter WR 01 .06 .041 is located at row B.018. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .06 .041"
+    }
+  },
+  {
+    "id": "inverter_WR_01_06_042",
+    "text": "Inverter WR 01 .06 .042 is located at row B.018. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .06 .042"
+    }
+  },
+  {
+    "id": "inverter_WR_01_06_043",
+    "text": "Inverter WR 01 .06 .043 is located at row B.018. Capacity: 255 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .06 .043"
+    }
+  },
+  {
+    "id": "inverter_WR_01_07_044",
+    "text": "Inverter WR 01 .07 .044 is located at row B.013. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .07 .044"
+    }
+  },
+  {
+    "id": "inverter_WR_01_07_045",
+    "text": "Inverter WR 01 .07 .045 is located at row B.013. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .07 .045"
+    }
+  },
+  {
+    "id": "inverter_WR_01_07_046",
+    "text": "Inverter WR 01 .07 .046 is located at row B.013. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .07 .046"
+    }
+  },
+  {
+    "id": "inverter_WR_01_07_047",
+    "text": "Inverter WR 01 .07 .047 is located at row B.013. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .07 .047"
+    }
+  },
+  {
+    "id": "inverter_WR_01_07_048",
+    "text": "Inverter WR 01 .07 .048 is located at row B.013. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .07 .048"
+    }
+  },
+  {
+    "id": "inverter_WR_01_07_049",
+    "text": "Inverter WR 01 .07 .049 is located at row B.013. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .07 .049"
+    }
+  },
+  {
+    "id": "inverter_WR_01_07_050",
+    "text": "Inverter WR 01 .07 .050 is located at row B.013. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .07 .050"
+    }
+  },
+  {
+    "id": "inverter_WR_01_07_051",
+    "text": "Inverter WR 01 .07 .051 is located at row B.013. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .07 .051"
+    }
+  },
+  {
+    "id": "inverter_WR_01_08_052",
+    "text": "Inverter WR 01 .08 .052 is located at row B.009. Capacity: 240 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .08 .052"
+    }
+  },
+  {
+    "id": "inverter_WR_01_08_053",
+    "text": "Inverter WR 01 .08 .053 is located at row B.009. Capacity: 230 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .08 .053"
+    }
+  },
+  {
+    "id": "inverter_WR_01_08_054",
+    "text": "Inverter WR 01 .08 .054 is located at row B.009. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .08 .054"
+    }
+  },
+  {
+    "id": "inverter_WR_01_08_055",
+    "text": "Inverter WR 01 .08 .055 is located at row B.009. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .08 .055"
+    }
+  },
+  {
+    "id": "inverter_WR_01_08_056",
+    "text": "Inverter WR 01 .08 .056 is located at row B.009. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .08 .056"
+    }
+  },
+  {
+    "id": "inverter_WR_01_08_057",
+    "text": "Inverter WR 01 .08 .057 is located at row B.009. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .08 .057"
+    }
+  },
+  {
+    "id": "inverter_WR_01_08_058",
+    "text": "Inverter WR 01 .08 .058 is located at row B.009. Capacity: 235 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .08 .058"
+    }
+  },
+  {
+    "id": "inverter_WR_01_08_059",
+    "text": "Inverter WR 01 .08 .059 is located at row B.009. Capacity: 230 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .08 .059"
+    }
+  },
+  {
+    "id": "inverter_WR_01_09_060",
+    "text": "Inverter WR 01 .09 .060 is located at row B.004. Capacity: 230 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .09 .060"
+    }
+  },
+  {
+    "id": "inverter_WR_01_09_061",
+    "text": "Inverter WR 01 .09 .061 is located at row B.004. Capacity: 230 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .09 .061"
+    }
+  },
+  {
+    "id": "inverter_WR_01_09_062",
+    "text": "Inverter WR 01 .09 .062 is located at row B.004. Capacity: 230 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .09 .062"
+    }
+  },
+  {
+    "id": "inverter_WR_01_09_063",
+    "text": "Inverter WR 01 .09 .063 is located at row B.004. Capacity: 230 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .09 .063"
+    }
+  },
+  {
+    "id": "inverter_WR_01_09_064",
+    "text": "Inverter WR 01 .09 .064 is located at row B.004. Capacity: 230 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .09 .064"
+    }
+  },
+  {
+    "id": "inverter_WR_01_09_065",
+    "text": "Inverter WR 01 .09 .065 is located at row B.004. Capacity: 230 kWp with unknown modules.",
+    "metadata": {
+      "source": "system_overview",
+      "type": "inverter_info",
+      "inverter_id": "WR 01 .09 .065"
+    }
+  }
+]

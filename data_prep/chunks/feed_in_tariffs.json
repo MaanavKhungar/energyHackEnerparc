@@ -1,0 +1,530 @@
+[
+  {
+    "id": "tariff_nan",
+    "text": "Feed-in tariff for nan (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "nan"
+    }
+  },
+  {
+    "id": "tariff_INV_0101001",
+    "text": "Feed-in tariff for INV 01.01.001 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.01.001"
+    }
+  },
+  {
+    "id": "tariff_INV_0101002",
+    "text": "Feed-in tariff for INV 01.01.002 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.01.002"
+    }
+  },
+  {
+    "id": "tariff_INV_0101003",
+    "text": "Feed-in tariff for INV 01.01.003 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.01.003"
+    }
+  },
+  {
+    "id": "tariff_INV_0101004",
+    "text": "Feed-in tariff for INV 01.01.004 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.01.004"
+    }
+  },
+  {
+    "id": "tariff_INV_0101005",
+    "text": "Feed-in tariff for INV 01.01.005 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.01.005"
+    }
+  },
+  {
+    "id": "tariff_INV_0101006",
+    "text": "Feed-in tariff for INV 01.01.006 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.01.006"
+    }
+  },
+  {
+    "id": "tariff_INV_0101007",
+    "text": "Feed-in tariff for INV 01.01.007 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.01.007"
+    }
+  },
+  {
+    "id": "tariff_INV_0102008",
+    "text": "Feed-in tariff for INV 01.02.008 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.02.008"
+    }
+  },
+  {
+    "id": "tariff_INV_0102009",
+    "text": "Feed-in tariff for INV 01.02.009 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.02.009"
+    }
+  },
+  {
+    "id": "tariff_INV_0102010",
+    "text": "Feed-in tariff for INV 01.02.010 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.02.010"
+    }
+  },
+  {
+    "id": "tariff_INV_0102011",
+    "text": "Feed-in tariff for INV 01.02.011 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.02.011"
+    }
+  },
+  {
+    "id": "tariff_INV_0102012",
+    "text": "Feed-in tariff for INV 01.02.012 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.02.012"
+    }
+  },
+  {
+    "id": "tariff_INV_0102013",
+    "text": "Feed-in tariff for INV 01.02.013 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.02.013"
+    }
+  },
+  {
+    "id": "tariff_INV_0102014",
+    "text": "Feed-in tariff for INV 01.02.014 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.02.014"
+    }
+  },
+  {
+    "id": "tariff_INV_0103015",
+    "text": "Feed-in tariff for INV 01.03.015 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.03.015"
+    }
+  },
+  {
+    "id": "tariff_INV_0103016",
+    "text": "Feed-in tariff for INV 01.03.016 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.03.016"
+    }
+  },
+  {
+    "id": "tariff_INV_0103017",
+    "text": "Feed-in tariff for INV 01.03.017 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.03.017"
+    }
+  },
+  {
+    "id": "tariff_INV_0103018",
+    "text": "Feed-in tariff for INV 01.03.018 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.03.018"
+    }
+  },
+  {
+    "id": "tariff_INV_0103019",
+    "text": "Feed-in tariff for INV 01.03.019 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.03.019"
+    }
+  },
+  {
+    "id": "tariff_INV_0103020",
+    "text": "Feed-in tariff for INV 01.03.020 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.03.020"
+    }
+  },
+  {
+    "id": "tariff_INV_0103021",
+    "text": "Feed-in tariff for INV 01.03.021 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.03.021"
+    }
+  },
+  {
+    "id": "tariff_INV_0104022",
+    "text": "Feed-in tariff for INV 01.04.022 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.04.022"
+    }
+  },
+  {
+    "id": "tariff_INV_0104023",
+    "text": "Feed-in tariff for INV 01.04.023 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.04.023"
+    }
+  },
+  {
+    "id": "tariff_INV_0104024",
+    "text": "Feed-in tariff for INV 01.04.024 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.04.024"
+    }
+  },
+  {
+    "id": "tariff_INV_0104025",
+    "text": "Feed-in tariff for INV 01.04.025 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.04.025"
+    }
+  },
+  {
+    "id": "tariff_INV_0104026",
+    "text": "Feed-in tariff for INV 01.04.026 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.04.026"
+    }
+  },
+  {
+    "id": "tariff_INV_0104027",
+    "text": "Feed-in tariff for INV 01.04.027 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.04.027"
+    }
+  },
+  {
+    "id": "tariff_INV_0104028",
+    "text": "Feed-in tariff for INV 01.04.028 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.04.028"
+    }
+  },
+  {
+    "id": "tariff_INV_0105029",
+    "text": "Feed-in tariff for INV 01.05.029 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.05.029"
+    }
+  },
+  {
+    "id": "tariff_INV_0105030",
+    "text": "Feed-in tariff for INV 01.05.030 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.05.030"
+    }
+  },
+  {
+    "id": "tariff_INV_0105031",
+    "text": "Feed-in tariff for INV 01.05.031 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.05.031"
+    }
+  },
+  {
+    "id": "tariff_INV_0105032",
+    "text": "Feed-in tariff for INV 01.05.032 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.05.032"
+    }
+  },
+  {
+    "id": "tariff_INV_0105033",
+    "text": "Feed-in tariff for INV 01.05.033 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.05.033"
+    }
+  },
+  {
+    "id": "tariff_INV_0105034",
+    "text": "Feed-in tariff for INV 01.05.034 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.05.034"
+    }
+  },
+  {
+    "id": "tariff_INV_0105035",
+    "text": "Feed-in tariff for INV 01.05.035 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.05.035"
+    }
+  },
+  {
+    "id": "tariff_INV_0106036",
+    "text": "Feed-in tariff for INV 01.06.036 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.06.036"
+    }
+  },
+  {
+    "id": "tariff_INV_0106037",
+    "text": "Feed-in tariff for INV 01.06.037 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.06.037"
+    }
+  },
+  {
+    "id": "tariff_INV_0106038",
+    "text": "Feed-in tariff for INV 01.06.038 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.06.038"
+    }
+  },
+  {
+    "id": "tariff_INV_0106039",
+    "text": "Feed-in tariff for INV 01.06.039 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.06.039"
+    }
+  },
+  {
+    "id": "tariff_INV_0106040",
+    "text": "Feed-in tariff for INV 01.06.040 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.06.040"
+    }
+  },
+  {
+    "id": "tariff_INV_0106041",
+    "text": "Feed-in tariff for INV 01.06.041 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.06.041"
+    }
+  },
+  {
+    "id": "tariff_INV_0106042",
+    "text": "Feed-in tariff for INV 01.06.042 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.06.042"
+    }
+  },
+  {
+    "id": "tariff_INV_0106043",
+    "text": "Feed-in tariff for INV 01.06.043 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.06.043"
+    }
+  },
+  {
+    "id": "tariff_INV_0107044",
+    "text": "Feed-in tariff for INV 01.07.044 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.07.044"
+    }
+  },
+  {
+    "id": "tariff_INV_0107045",
+    "text": "Feed-in tariff for INV 01.07.045 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.07.045"
+    }
+  },
+  {
+    "id": "tariff_INV_0107046",
+    "text": "Feed-in tariff for INV 01.07.046 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.07.046"
+    }
+  },
+  {
+    "id": "tariff_INV_0107047",
+    "text": "Feed-in tariff for INV 01.07.047 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.07.047"
+    }
+  },
+  {
+    "id": "tariff_INV_0107048",
+    "text": "Feed-in tariff for INV 01.07.048 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.07.048"
+    }
+  },
+  {
+    "id": "tariff_INV_0107049",
+    "text": "Feed-in tariff for INV 01.07.049 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.07.049"
+    }
+  },
+  {
+    "id": "tariff_INV_0107050",
+    "text": "Feed-in tariff for INV 01.07.050 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.07.050"
+    }
+  },
+  {
+    "id": "tariff_INV_0107051",
+    "text": "Feed-in tariff for INV 01.07.051 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.07.051"
+    }
+  },
+  {
+    "id": "tariff_INV_0108052",
+    "text": "Feed-in tariff for INV 01.08.052 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.08.052"
+    }
+  },
+  {
+    "id": "tariff_INV_0108053",
+    "text": "Feed-in tariff for INV 01.08.053 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.08.053"
+    }
+  },
+  {
+    "id": "tariff_INV_0108054",
+    "text": "Feed-in tariff for INV 01.08.054 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.08.054"
+    }
+  },
+  {
+    "id": "tariff_INV_0108055",
+    "text": "Feed-in tariff for INV 01.08.055 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.08.055"
+    }
+  },
+  {
+    "id": "tariff_INV_0108056",
+    "text": "Feed-in tariff for INV 01.08.056 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.08.056"
+    }
+  },
+  {
+    "id": "tariff_INV_0108057",
+    "text": "Feed-in tariff for INV 01.08.057 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.08.057"
+    }
+  },
+  {
+    "id": "tariff_INV_0108058",
+    "text": "Feed-in tariff for INV 01.08.058 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.08.058"
+    }
+  },
+  {
+    "id": "tariff_INV_0108059",
+    "text": "Feed-in tariff for INV 01.08.059 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.08.059"
+    }
+  },
+  {
+    "id": "tariff_INV_0109060",
+    "text": "Feed-in tariff for INV 01.09.060 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.09.060"
+    }
+  },
+  {
+    "id": "tariff_INV_0109061",
+    "text": "Feed-in tariff for INV 01.09.061 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.09.061"
+    }
+  },
+  {
+    "id": "tariff_INV_0109062",
+    "text": "Feed-in tariff for INV 01.09.062 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.09.062"
+    }
+  },
+  {
+    "id": "tariff_INV_0109063",
+    "text": "Feed-in tariff for INV 01.09.063 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.09.063"
+    }
+  },
+  {
+    "id": "tariff_INV_0109064",
+    "text": "Feed-in tariff for INV 01.09.064 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.09.064"
+    }
+  },
+  {
+    "id": "tariff_INV_0109065",
+    "text": "Feed-in tariff for INV 01.09.065 (ct/kWh): ",
+    "metadata": {
+      "source": "feed_in_tariffs",
+      "inverter": "INV 01.09.065"
+    }
+  }
+]

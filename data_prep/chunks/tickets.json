@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "ticket_2020_0",
+    "text": "Incident on 2020-08-05T10:00:00+02:00: component='Plant', category='Communication fault'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Communication fault",
+      "start": "2020-08-05T10:00:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_1",
+    "text": "Incident on 2020-08-18T16:31:00+02:00: component='Plant', category=''. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "",
+      "start": "2020-08-18T16:31:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_2",
+    "text": "Incident on 2021-04-03T05:59:00+02:00: component='Plant', category='Grid fault'. Duration: 1 days 02:46:00. Ended: 2021-04-04T08:45:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2021-04-03T05:59:00+02:00",
+      "end": "2021-04-04T08:45:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_3",
+    "text": "Incident on 2021-04-21T07:45:00+02:00: component='Plant', category='Medium-voltage maintenance (internal)'. Duration: 0 days 05:00:00. Ended: 2021-04-21T12:45:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Medium-voltage maintenance (internal)",
+      "start": "2021-04-21T07:45:00+02:00",
+      "end": "2021-04-21T12:45:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_4",
+    "text": "Incident on 2021-09-13T14:00:00+02:00: component='Plant', category='Grid fault'. Duration: 0 days 21:00:00. Ended: 2021-09-14T11:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2021-09-13T14:00:00+02:00",
+      "end": "2021-09-14T11:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_5",
+    "text": "Incident on 2021-12-01T00:00:00+01:00: component='Plant', category='Schnee'. Duration: 30 days 00:00:00. Ended: 2021-12-31T00:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Schnee",
+      "start": "2021-12-01T00:00:00+01:00",
+      "end": "2021-12-31T00:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_6",
+    "text": "Incident on 2022-01-01T00:00:00+01:00: component='Plant', category='Schnee'. Duration: 30 days 00:00:00. Ended: 2022-01-31T00:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Schnee",
+      "start": "2022-01-01T00:00:00+01:00",
+      "end": "2022-01-31T00:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_7",
+    "text": "Incident on 2022-01-30T09:00:00+01:00: component='Plant', category='Grid fault'. Duration: 0 days 05:32:00. Ended: 2022-01-30T14:32:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2022-01-30T09:00:00+01:00",
+      "end": "2022-01-30T14:32:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_8",
+    "text": "Incident on 2022-02-01T00:00:00+01:00: component='Plant', category='Schnee'. Duration: 27 days 00:00:00. Ended: 2022-02-28T00:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Schnee",
+      "start": "2022-02-01T00:00:00+01:00",
+      "end": "2022-02-28T00:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_9",
+    "text": "Incident on 2022-02-09T06:00:00+01:00: component='Plant', category='Grid fault'. Duration: 0 days 10:30:00. Ended: 2022-02-09T16:30:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2022-02-09T06:00:00+01:00",
+      "end": "2022-02-09T16:30:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_10",
+    "text": "Incident on 2022-04-13T00:00:00+02:00: component='Plant', category='Grid fault'. Duration: 0 days 13:00:00. Ended: 2022-04-13T13:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2022-04-13T00:00:00+02:00",
+      "end": "2022-04-13T13:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_11",
+    "text": "Incident on 2022-05-01T00:00:00+02:00: component='Plant', category='Curtailment'. Duration: 30 days 00:00:00. Ended: 2022-05-31T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Curtailment",
+      "start": "2022-05-01T00:00:00+02:00",
+      "end": "2022-05-31T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_12",
+    "text": "Incident on 2022-07-01T00:00:00+02:00: component='Plant', category='Curtailment'. Duration: 30 days 00:00:00. Ended: 2022-07-31T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Curtailment",
+      "start": "2022-07-01T00:00:00+02:00",
+      "end": "2022-07-31T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_13",
+    "text": "Incident on 2022-08-01T00:00:00+02:00: component='Plant', category='Curtailment'. Duration: 30 days 00:00:00. Ended: 2022-08-31T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Curtailment",
+      "start": "2022-08-01T00:00:00+02:00",
+      "end": "2022-08-31T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_14",
+    "text": "Incident on 2023-06-23T00:00:00+02:00: component='Plant', category='Grid fault'. Duration: 0 days 11:00:00. Ended: 2023-06-23T11:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2023-06-23T00:00:00+02:00",
+      "end": "2023-06-23T11:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_15",
+    "text": "Incident on 2023-10-04T00:00:00+02:00: component='Plant', category='Grid fault'. Duration: 0 days 10:30:00. Ended: 2023-10-04T10:30:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2023-10-04T00:00:00+02:00",
+      "end": "2023-10-04T10:30:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_16",
+    "text": "Incident on 2023-12-22T00:00:00+01:00: component='Plant', category='Grid fault'. Duration: 0 days 12:00:00. Ended: 2023-12-22T12:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2023-12-22T00:00:00+01:00",
+      "end": "2023-12-22T12:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_17",
+    "text": "Incident on 2024-03-07T06:30:00+01:00: component='Plant', category='Sonstiges'. Duration: 0 days 07:50:00. Ended: 2024-03-07T14:20:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Sonstiges",
+      "start": "2024-03-07T06:30:00+01:00",
+      "end": "2024-03-07T14:20:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_18",
+    "text": "Incident on 2025-06-14T14:00:00+02:00: component='Plant', category='Grid fault'. Duration: 1 days 00:00:00. Ended: 2025-06-15T14:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2025-06-14T14:00:00+02:00",
+      "end": "2025-06-15T14:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_19",
+    "text": "Incident on 2025-08-03T10:00:00+02:00: component='Plant', category='Grid fault'. Duration: 1 days 01:00:00. Ended: 2025-08-04T11:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2025-08-03T10:00:00+02:00",
+      "end": "2025-08-04T11:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_20",
+    "text": "Incident on 2025-08-13T14:45:00+02:00: component='Plant', category='Grid fault'. Duration: 0 days 20:15:00. Ended: 2025-08-14T11:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2025-08-13T14:45:00+02:00",
+      "end": "2025-08-14T11:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_21",
+    "text": "Incident on 2025-09-15T17:40:00+02:00: component='Plant', category='Grid fault'. Duration: 0 days 19:58:00. Ended: 2025-09-16T13:38:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2025-09-15T17:40:00+02:00",
+      "end": "2025-09-16T13:38:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_22",
+    "text": "Incident on 2026-01-02T13:49:26+01:00: component='Plant', category='Nachr\u00fcstung'. Duration: 9 days 10:10:34. Ended: 2026-01-12T00:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Nachr\u00fcstung",
+      "start": "2026-01-02T13:49:26+01:00",
+      "end": "2026-01-12T00:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_23",
+    "text": "Incident on 2026-05-18T13:54:00+02:00: component='Plant', category='Grid fault'. Duration: 0 days 18:57:00. Ended: 2026-05-19T08:51:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2026-05-18T13:54:00+02:00",
+      "end": "2026-05-19T08:51:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_24",
+    "text": "Incident on 2026-05-28T11:00:00+02:00: component='Plant', category='Grid fault'. Duration: 1 days 00:00:00. Ended: 2026-05-29T11:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2026-05-28T11:00:00+02:00",
+      "end": "2026-05-29T11:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_25",
+    "text": "Incident on 2026-05-29T13:00:00+02:00: component='Plant', category='Grid fault'. Duration: 0 days 20:10:00. Ended: 2026-05-30T09:10:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "Plant",
+      "category": "Grid fault",
+      "start": "2026-05-29T13:00:00+02:00",
+      "end": "2026-05-30T09:10:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_26",
+    "text": "Incident on 2020-10-05T00:00:00+02:00: component='INV 01.07.045', category='Strangausfall'. Duration: 1736 days 00:00:00. Ended: 2025-07-07T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.07.045",
+      "category": "Strangausfall",
+      "start": "2020-10-05T00:00:00+02:00",
+      "end": "2025-07-07T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_27",
+    "text": "Incident on 2021-03-15T14:34:13+01:00: component='INV 01.04.024', category='--'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.04.024",
+      "category": "--",
+      "start": "2021-03-15T14:34:13+01:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_28",
+    "text": "Incident on 2021-03-22T08:00:00+01:00: component='INV 01.09.060', category='--'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.09.060",
+      "category": "--",
+      "start": "2021-03-22T08:00:00+01:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_29",
+    "text": "Incident on 2021-05-03T00:00:00+02:00: component='INV 01.07.046', category='Strangausfall'. Duration: 588 days 00:00:00. Ended: 2022-12-12T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.07.046",
+      "category": "Strangausfall",
+      "start": "2021-05-03T00:00:00+02:00",
+      "end": "2022-12-12T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_30",
+    "text": "Incident on 2021-05-31T00:00:00+02:00: component='INV 01.07.047', category='Strangausfall'. Duration: 609 days 00:00:00. Ended: 2023-01-30T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.07.047",
+      "category": "Strangausfall",
+      "start": "2021-05-31T00:00:00+02:00",
+      "end": "2023-01-30T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_31",
+    "text": "Incident on 2021-07-01T15:34:00+02:00: component='INV 01.02.014', category='unbekannte St\u00f6rung'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.02.014",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2021-07-01T15:34:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_32",
+    "text": "Incident on 2021-07-01T15:34:00+02:00: component='INV 01.05.032', category='unbekannte St\u00f6rung'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.05.032",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2021-07-01T15:34:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_33",
+    "text": "Incident on 2021-07-01T15:34:00+02:00: component='INV 01.02.012', category='unbekannte St\u00f6rung'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.02.012",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2021-07-01T15:34:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_34",
+    "text": "Incident on 2021-07-19T08:00:00+02:00: component='INV 01.03.017', category='unbekannte St\u00f6rung'. Duration: 20 days 16:00:00. Ended: 2021-08-09T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.03.017",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2021-07-19T08:00:00+02:00",
+      "end": "2021-08-09T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_35",
+    "text": "Incident on 2021-12-01T00:00:00+01:00: component='INV 01.01.007', category='unbekannte St\u00f6rung'. Duration: 116 days 23:00:00. Ended: 2022-03-28T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.007",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2021-12-01T00:00:00+01:00",
+      "end": "2022-03-28T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_36",
+    "text": "Incident on 2022-01-01T00:00:00+01:00: component='INV 01.03.016', category='unbekannte St\u00f6rung'. Duration: 23 days 15:43:00. Ended: 2022-01-24T15:43:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.03.016",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2022-01-01T00:00:00+01:00",
+      "end": "2022-01-24T15:43:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_37",
+    "text": "Incident on 2022-05-23T00:00:00+02:00: component='INV 01.03.016', category='unbekannte St\u00f6rung'. Duration: 22 days 11:57:00. Ended: 2022-06-14T11:57:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.03.016",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2022-05-23T00:00:00+02:00",
+      "end": "2022-06-14T11:57:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_38",
+    "text": "Incident on 2022-07-25T00:00:00+02:00: component='INV 01.06.040', category='unbekannte St\u00f6rung'. Duration: 17 days 00:00:00. Ended: 2022-08-11T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.06.040",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2022-07-25T00:00:00+02:00",
+      "end": "2022-08-11T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_39",
+    "text": "Incident on 2022-07-25T00:00:00+02:00: component='INV 01.01.006', category='unbekannte St\u00f6rung'. Duration: 17 days 00:00:00. Ended: 2022-08-11T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.006",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2022-07-25T00:00:00+02:00",
+      "end": "2022-08-11T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_40",
+    "text": "Incident on 2022-07-25T00:00:00+02:00: component='INV 01.01.003', category='unbekannte St\u00f6rung'. Duration: 17 days 00:00:00. Ended: 2022-08-11T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.003",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2022-07-25T00:00:00+02:00",
+      "end": "2022-08-11T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_41",
+    "text": "Incident on 2022-07-25T00:00:00+02:00: component='INV 01.01.004', category='unbekannte St\u00f6rung'. Duration: 17 days 00:00:00. Ended: 2022-08-11T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.004",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2022-07-25T00:00:00+02:00",
+      "end": "2022-08-11T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_42",
+    "text": "Incident on 2022-10-01T00:00:00+02:00: component='INV 01.01.001', category='unbekannte St\u00f6rung'. Duration: 45 days 16:18:00. Ended: 2022-11-15T15:18:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.001",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2022-10-01T00:00:00+02:00",
+      "end": "2022-11-15T15:18:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_43",
+    "text": "Incident on 2022-10-01T00:00:00+02:00: component='INV 01.05.030', category='unbekannte St\u00f6rung'. Duration: 45 days 16:18:00. Ended: 2022-11-15T15:18:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.05.030",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2022-10-01T00:00:00+02:00",
+      "end": "2022-11-15T15:18:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_44",
+    "text": "Incident on 2023-06-19T00:00:00+02:00: component='INV 01.03.015', category='unbekannte St\u00f6rung'. Duration: 31 days 00:00:00. Ended: 2023-07-20T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.03.015",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2023-06-19T00:00:00+02:00",
+      "end": "2023-07-20T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_45",
+    "text": "Incident on 2023-06-19T00:00:00+02:00: component='INV 01.01.002', category='unbekannte St\u00f6rung'. Duration: 31 days 00:00:00. Ended: 2023-07-20T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.002",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2023-06-19T00:00:00+02:00",
+      "end": "2023-07-20T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_46",
+    "text": "Incident on 2023-06-19T00:00:00+02:00: component='INV 01.01.004', category='unbekannte St\u00f6rung'. Duration: 31 days 00:00:00. Ended: 2023-07-20T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.004",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2023-06-19T00:00:00+02:00",
+      "end": "2023-07-20T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_47",
+    "text": "Incident on 2024-05-13T00:00:00+02:00: component='INV 01.02.008', category='unbekannte St\u00f6rung'. Duration: 10 days 15:00:00. Ended: 2024-05-23T15:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.02.008",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2024-05-13T00:00:00+02:00",
+      "end": "2024-05-23T15:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_48",
+    "text": "Incident on 2024-05-13T00:00:00+02:00: component='INV 01.09.062', category='unbekannte St\u00f6rung'. Duration: 10 days 15:00:00. Ended: 2024-05-23T15:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.09.062",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2024-05-13T00:00:00+02:00",
+      "end": "2024-05-23T15:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_49",
+    "text": "Incident on 2024-05-13T00:00:00+02:00: component='INV 01.01.006', category='unbekannte St\u00f6rung'. Duration: 10 days 15:00:00. Ended: 2024-05-23T15:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.006",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2024-05-13T00:00:00+02:00",
+      "end": "2024-05-23T15:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_50",
+    "text": "Incident on 2024-05-13T00:00:00+02:00: component='INV 01.01.002', category='unbekannte St\u00f6rung'. Duration: 10 days 15:00:00. Ended: 2024-05-23T15:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.002",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2024-05-13T00:00:00+02:00",
+      "end": "2024-05-23T15:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_51",
+    "text": "Incident on 2024-05-13T00:00:00+02:00: component='INV 01.01.004', category='unbekannte St\u00f6rung'. Duration: 10 days 15:00:00. Ended: 2024-05-23T15:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.004",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2024-05-13T00:00:00+02:00",
+      "end": "2024-05-23T15:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_52",
+    "text": "Incident on 2024-05-14T00:00:00+02:00: component='INV 01.07.045', category='unbekannte St\u00f6rung'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.07.045",
+      "category": "unbekannte St\u00f6rung",
+      "start": "2024-05-14T00:00:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_53",
+    "text": "Incident on 2024-08-30T00:00:00+02:00: component='INV 01.08.058', category='Fehlerursache konnte nicht ermittelt werden'. Duration: 336 days 00:00:00. Ended: 2025-08-01T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.08.058",
+      "category": "Fehlerursache konnte nicht ermittelt werden",
+      "start": "2024-08-30T00:00:00+02:00",
+      "end": "2025-08-01T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_54",
+    "text": "Incident on 2025-06-01T00:00:00+02:00: component='INV 01.09.062', category='Fehlerursache konnte nicht ermittelt werden'. Duration: 36 days 00:00:00. Ended: 2025-07-07T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.09.062",
+      "category": "Fehlerursache konnte nicht ermittelt werden",
+      "start": "2025-06-01T00:00:00+02:00",
+      "end": "2025-07-07T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_55",
+    "text": "Incident on 2025-06-01T00:00:00+02:00: component='INV 01.02.012', category='Kondensatoren defekt'. Duration: 36 days 00:00:00. Ended: 2025-07-07T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.02.012",
+      "category": "Kondensatoren defekt",
+      "start": "2025-06-01T00:00:00+02:00",
+      "end": "2025-07-07T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_56",
+    "text": "Incident on 2025-06-01T00:00:00+02:00: component='INV 01.01.004', category='Fehlerursache konnte nicht ermittelt werden'. Duration: 36 days 00:00:00. Ended: 2025-07-07T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.01.004",
+      "category": "Fehlerursache konnte nicht ermittelt werden",
+      "start": "2025-06-01T00:00:00+02:00",
+      "end": "2025-07-07T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_57",
+    "text": "Incident on 2025-06-01T00:00:00+02:00: component='INV 01.08.058', category='Isolationswerte'. Duration: 36 days 00:00:00. Ended: 2025-07-07T00:00:00+02:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.08.058",
+      "category": "Isolationswerte",
+      "start": "2025-06-01T00:00:00+02:00",
+      "end": "2025-07-07T00:00:00+02:00"
+    }
+  },
+  {
+    "id": "ticket_2020_58",
+    "text": "Incident on 2025-07-03T00:00:00+02:00: component='INV 01.09.065', category='Initialisierung-Fehler'. Duration: 125 days 01:00:00. Ended: 2025-11-05T00:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.09.065",
+      "category": "Initialisierung-Fehler",
+      "start": "2025-07-03T00:00:00+02:00",
+      "end": "2025-11-05T00:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_59",
+    "text": "Incident on 2025-07-12T00:00:00+02:00: component='INV 01.05.035', category='Com-Fehler'. Duration: 116 days 01:00:00. Ended: 2025-11-05T00:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.05.035",
+      "category": "Com-Fehler",
+      "start": "2025-07-12T00:00:00+02:00",
+      "end": "2025-11-05T00:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_60",
+    "text": "Incident on 2025-07-12T00:00:00+02:00: component='INV 01.06.036', category='Kondensatoren defekt'. Duration: 116 days 01:00:00. Ended: 2025-11-05T00:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.06.036",
+      "category": "Kondensatoren defekt",
+      "start": "2025-07-12T00:00:00+02:00",
+      "end": "2025-11-05T00:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_61",
+    "text": "Incident on 2025-07-12T00:00:00+02:00: component='INV 01.08.057', category='Platinen und mehr defekt'. Duration: 116 days 01:00:00. Ended: 2025-11-05T00:00:00+01:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.08.057",
+      "category": "Platinen und mehr defekt",
+      "start": "2025-07-12T00:00:00+02:00",
+      "end": "2025-11-05T00:00:00+01:00"
+    }
+  },
+  {
+    "id": "ticket_2020_62",
+    "text": "Incident on 2025-09-01T00:00:00+02:00: component='INV 01.09.062', category='Platinen und mehr defekt'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.09.062",
+      "category": "Platinen und mehr defekt",
+      "start": "2025-09-01T00:00:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_63",
+    "text": "Incident on 2025-09-01T00:00:00+02:00: component='INV 01.04.023', category='4-LED St\u00f6rung'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.04.023",
+      "category": "4-LED St\u00f6rung",
+      "start": "2025-09-01T00:00:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_64",
+    "text": "Incident on 2025-09-01T00:00:00+02:00: component='INV 01.04.027', category='4-LED St\u00f6rung'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.04.027",
+      "category": "4-LED St\u00f6rung",
+      "start": "2025-09-01T00:00:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_65",
+    "text": "Incident on 2025-09-01T00:00:00+02:00: component='INV 01.09.060', category='Isolationswerte'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.09.060",
+      "category": "Isolationswerte",
+      "start": "2025-09-01T00:00:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_66",
+    "text": "Incident on 2025-09-01T00:00:00+02:00: component='INV 01.08.058', category='Fehlerursache konnte nicht ermittelt werden'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.08.058",
+      "category": "Fehlerursache konnte nicht ermittelt werden",
+      "start": "2025-09-01T00:00:00+02:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_67",
+    "text": "Incident on 2026-02-24T00:00:00+01:00: component='INV 01.07.048', category='Fehlerursache konnte nicht ermittelt werden'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.07.048",
+      "category": "Fehlerursache konnte nicht ermittelt werden",
+      "start": "2026-02-24T00:00:00+01:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_68",
+    "text": "Incident on 2026-02-24T00:00:00+01:00: component='INV 01.08.053', category='Initialisierung-Fehler'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.08.053",
+      "category": "Initialisierung-Fehler",
+      "start": "2026-02-24T00:00:00+01:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_69",
+    "text": "Incident on 2026-02-24T00:00:00+01:00: component='INV 01.04.025', category='Kondensatoren defekt'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.04.025",
+      "category": "Kondensatoren defekt",
+      "start": "2026-02-24T00:00:00+01:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_70",
+    "text": "Incident on 2026-02-24T00:00:00+01:00: component='INV 01.08.052', category='Fehlerursache konnte nicht ermittelt werden'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.08.052",
+      "category": "Fehlerursache konnte nicht ermittelt werden",
+      "start": "2026-02-24T00:00:00+01:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_71",
+    "text": "Incident on 2026-02-24T00:00:00+01:00: component='INV 01.08.058', category='Fehlerursache konnte nicht ermittelt werden'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.08.058",
+      "category": "Fehlerursache konnte nicht ermittelt werden",
+      "start": "2026-02-24T00:00:00+01:00",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2020_72",
+    "text": "Incident on nan: component='INV 01.06.036', category='--'. Ended: nan.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2020-2026",
+      "component": "INV 01.06.036",
+      "category": "--",
+      "start": "nan",
+      "end": "nan"
+    }
+  },
+  {
+    "id": "ticket_2019_0",
+    "text": "Incident starting 2019-01-08 00:00:00: component='Inverter', fault type='General fault', affected capacity=30.6 kWp, duration=392.0000000000582 hours. Ended: 2019-01-24 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Inverter",
+      "fault_type": "General fault",
+      "start": "2019-01-08 00:00:00",
+      "end": "2019-01-24 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_1",
+    "text": "Incident starting 2019-01-12 00:00:00: component='Transformer station', fault type='General fault', affected capacity=1896.98 kWp, duration=32.49999999994179 hours. Ended: 2019-01-13 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Transformer station",
+      "fault_type": "General fault",
+      "start": "2019-01-12 00:00:00",
+      "end": "2019-01-13 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_2",
+    "text": "Incident starting 2019-03-11 00:00:00: component='nan', fault type='General fault', affected capacity=1896.9800000000005 kWp, duration=9.500000000058208 hours. Ended: 2019-03-11 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "nan",
+      "fault_type": "General fault",
+      "start": "2019-03-11 00:00:00",
+      "end": "2019-03-11 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_3",
+    "text": "Incident starting 2019-05-24 00:00:00: component='Inverter', fault type='General fault', affected capacity=28.8 kWp, duration=552.9999999999418 hours. Ended: 2019-06-16 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Inverter",
+      "fault_type": "General fault",
+      "start": "2019-05-24 00:00:00",
+      "end": "2019-06-16 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_4",
+    "text": "Incident starting 2019-07-08 00:00:00: component='Inverter', fault type='General fault', affected capacity=30.6 kWp, duration=144.0 hours. Ended: 2019-07-14 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Inverter",
+      "fault_type": "General fault",
+      "start": "2019-07-08 00:00:00",
+      "end": "2019-07-14 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_5",
+    "text": "Incident starting 2019-07-31 00:00:00: component='Gesamte Anlage', fault type='Leistungsbegrenzung (intern)', affected capacity=1896.9800000000005 kWp, duration=12.0 hours. Ended: 2019-07-31 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Gesamte Anlage",
+      "fault_type": "Leistungsbegrenzung (intern)",
+      "start": "2019-07-31 00:00:00",
+      "end": "2019-07-31 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_6",
+    "text": "Incident starting 2019-08-02 00:00:00: component='Inverter', fault type='General fault', affected capacity=30.6 kWp, duration=145.1333333333605 hours. Ended: 2019-08-08 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Inverter",
+      "fault_type": "General fault",
+      "start": "2019-08-02 00:00:00",
+      "end": "2019-08-08 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_7",
+    "text": "Incident starting 2019-09-10 00:00:00: component='Inverter', fault type='General fault', affected capacity=30.6 kWp, duration=177.9999999999418 hours. Ended: 2019-09-17 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Inverter",
+      "fault_type": "General fault",
+      "start": "2019-09-10 00:00:00",
+      "end": "2019-09-17 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_8",
+    "text": "Incident starting 2019-11-16 00:00:00: component='Gesamte Anlage', fault type='General fault', affected capacity=1896.9800000000005 kWp, duration=3.9999999999417923 hours. Ended: 2019-11-16 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Gesamte Anlage",
+      "fault_type": "General fault",
+      "start": "2019-11-16 00:00:00",
+      "end": "2019-11-16 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_9",
+    "text": "Incident starting 2019-11-25 00:00:00: component='Gesamte Anlage', fault type='nan', affected capacity=1896.9800000000005 kWp, duration=9.999999999941792 hours. Ended: 2019-11-25 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Gesamte Anlage",
+      "fault_type": "nan",
+      "start": "2019-11-25 00:00:00",
+      "end": "2019-11-25 00:00:00"
+    }
+  },
+  {
+    "id": "ticket_2019_10",
+    "text": "Incident starting 2020-02-11 00:00:00: component='Gesamte Anlage', fault type='Grid fault', affected capacity=1896.9800000000005 kWp, duration=21.999999999941792 hours. Ended: 2020-02-12 00:00:00.",
+    "metadata": {
+      "source": "tickets",
+      "sheet": "2019-2020",
+      "component": "Gesamte Anlage",
+      "fault_type": "Grid fault",
+      "start": "2020-02-11 00:00:00",
+      "end": "2020-02-12 00:00:00"
+    }
+  }
+]

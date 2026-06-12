@@ -1,0 +1,596 @@
+[
+  {
+    "id": "error_stats_INV_0101001",
+    "text": "Inverter INV 01.01.001 error statistics: total non-zero error events = 3,093. Top error codes: code 655626: 1927 times, code 655616: 1005 times, code 655363: 64 times, code 655379: 34 times, code 983300: 27 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.01.001",
+      "total_errors": 3093
+    }
+  },
+  {
+    "id": "error_stats_INV_0101002",
+    "text": "Inverter INV 01.01.002 error statistics: total non-zero error events = 27,158. Top error codes: code 655616: 25269 times, code 655626: 1827 times, code 655366: 30 times, code 655363: 13 times, code 655369: 4 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.01.002",
+      "total_errors": 27158
+    }
+  },
+  {
+    "id": "error_stats_INV_0101003",
+    "text": "Inverter INV 01.01.003 error statistics: total non-zero error events = 12,873. Top error codes: code 655361: 9777 times, code 655626: 1929 times, code 655616: 861 times, code 655363: 255 times, code 655371: 30 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.01.003",
+      "total_errors": 12873
+    }
+  },
+  {
+    "id": "error_stats_INV_0101004",
+    "text": "Inverter INV 01.01.004 error statistics: total non-zero error events = 14,572. Top error codes: code 983300: 4622 times, code 655363: 3110 times, code 655621: 3002 times, code 655616: 1526 times, code 655626: 1507 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.01.004",
+      "total_errors": 14572
+    }
+  },
+  {
+    "id": "error_stats_INV_0101005",
+    "text": "Inverter INV 01.01.005 error statistics: total non-zero error events = 3,349. Top error codes: code 655626: 1643 times, code 655616: 1562 times, code 655363: 65 times, code 655379: 43 times, code 655369: 8 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.01.005",
+      "total_errors": 3349
+    }
+  },
+  {
+    "id": "error_stats_INV_0101006",
+    "text": "Inverter INV 01.01.006 error statistics: total non-zero error events = 2,993. Top error codes: code 655626: 1742 times, code 655616: 909 times, code 655363: 297 times, code 655379: 12 times, code 589826: 11 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.01.006",
+      "total_errors": 2993
+    }
+  },
+  {
+    "id": "error_stats_INV_0101007",
+    "text": "Inverter INV 01.01.007 error statistics: total non-zero error events = 4,630. Top error codes: code 655363: 2084 times, code 655626: 1922 times, code 655616: 581 times, code 655371: 16 times, code 655366: 9 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.01.007",
+      "total_errors": 4630
+    }
+  },
+  {
+    "id": "error_stats_INV_0102008",
+    "text": "Inverter INV 01.02.008 error statistics: total non-zero error events = 2,498. Top error codes: code 655626: 1806 times, code 655616: 637 times, code 655363: 25 times, code 655372: 7 times, code 655365: 7 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.02.008",
+      "total_errors": 2498
+    }
+  },
+  {
+    "id": "error_stats_INV_0102009",
+    "text": "Inverter INV 01.02.009 error statistics: total non-zero error events = 2,868. Top error codes: code 655626: 1585 times, code 655616: 1051 times, code 655363: 199 times, code 655379: 13 times, code 655366: 11 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.02.009",
+      "total_errors": 2868
+    }
+  },
+  {
+    "id": "error_stats_INV_0102010",
+    "text": "Inverter INV 01.02.010 error statistics: total non-zero error events = 2,872. Top error codes: code 655626: 1638 times, code 655616: 1146 times, code 655363: 54 times, code 655379: 19 times, code 655365: 8 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.02.010",
+      "total_errors": 2872
+    }
+  },
+  {
+    "id": "error_stats_INV_0102011",
+    "text": "Inverter INV 01.02.011 error statistics: total non-zero error events = 3,612. Top error codes: code 655616: 1598 times, code 655626: 1567 times, code 655363: 381 times, code 655379: 33 times, code 262145: 12 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.02.011",
+      "total_errors": 3612
+    }
+  },
+  {
+    "id": "error_stats_INV_0102012",
+    "text": "Inverter INV 01.02.012 error statistics: total non-zero error events = 28,176. Top error codes: code 589831: 17887 times, code 655616: 5826 times, code 655626: 4425 times, code 655363: 10 times, code 589850: 10 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.02.012",
+      "total_errors": 28176
+    }
+  },
+  {
+    "id": "error_stats_INV_0102013",
+    "text": "Inverter INV 01.02.013 error statistics: total non-zero error events = 3,224. Top error codes: code 655626: 1676 times, code 655616: 1298 times, code 655363: 227 times, code 655365: 10 times, code 655369: 4 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.02.013",
+      "total_errors": 3224
+    }
+  },
+  {
+    "id": "error_stats_INV_0102014",
+    "text": "Inverter INV 01.02.014 error statistics: total non-zero error events = 6,778. Top error codes: code 655626: 3900 times, code 655616: 1313 times, code 589831: 1300 times, code 655363: 131 times, code 655379: 98 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.02.014",
+      "total_errors": 6778
+    }
+  },
+  {
+    "id": "error_stats_INV_0103015",
+    "text": "Inverter INV 01.03.015 error statistics: total non-zero error events = 2,355. Top error codes: code 655626: 1501 times, code 655616: 773 times, code 655363: 27 times, code 983296: 25 times, code 983300: 10 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.03.015",
+      "total_errors": 2355
+    }
+  },
+  {
+    "id": "error_stats_INV_0103016",
+    "text": "Inverter INV 01.03.016 error statistics: total non-zero error events = 2,811. Top error codes: code 655626: 1369 times, code 655616: 1166 times, code 655379: 235 times, code 655363: 15 times, code 655371: 13 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.03.016",
+      "total_errors": 2811
+    }
+  },
+  {
+    "id": "error_stats_INV_0103017",
+    "text": "Inverter INV 01.03.017 error statistics: total non-zero error events = 4,482. Top error codes: code 655626: 3408 times, code 655616: 600 times, code 589831: 386 times, code 983296: 65 times, code 983300: 9 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.03.017",
+      "total_errors": 4482
+    }
+  },
+  {
+    "id": "error_stats_INV_0103018",
+    "text": "Inverter INV 01.03.018 error statistics: total non-zero error events = 3,482. Top error codes: code 655616: 1773 times, code 655626: 1534 times, code 655379: 118 times, code 655363: 38 times, code 655366: 7 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.03.018",
+      "total_errors": 3482
+    }
+  },
+  {
+    "id": "error_stats_INV_0103019",
+    "text": "Inverter INV 01.03.019 error statistics: total non-zero error events = 2,354. Top error codes: code 655626: 1709 times, code 655616: 605 times, code 655363: 22 times, code 655366: 10 times, code 655365: 5 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.03.019",
+      "total_errors": 2354
+    }
+  },
+  {
+    "id": "error_stats_INV_0103020",
+    "text": "Inverter INV 01.03.020 error statistics: total non-zero error events = 3,134. Top error codes: code 655626: 1480 times, code 655616: 1341 times, code 655363: 180 times, code 655379: 97 times, code 655369: 13 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.03.020",
+      "total_errors": 3134
+    }
+  },
+  {
+    "id": "error_stats_INV_0103021",
+    "text": "Inverter INV 01.03.021 error statistics: total non-zero error events = 2,410. Top error codes: code 655626: 1560 times, code 655616: 796 times, code 655363: 32 times, code 655366: 11 times, code 655379: 5 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.03.021",
+      "total_errors": 2410
+    }
+  },
+  {
+    "id": "error_stats_INV_0104022",
+    "text": "Inverter INV 01.04.022 error statistics: total non-zero error events = 4,307. Top error codes: code 655626: 2016 times, code 655616: 1239 times, code 655379: 1008 times, code 983300: 17 times, code 983296: 11 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.04.022",
+      "total_errors": 4307
+    }
+  },
+  {
+    "id": "error_stats_INV_0104023",
+    "text": "Inverter INV 01.04.023 error statistics: total non-zero error events = 3,642. Top error codes: code 655626: 2106 times, code 655616: 1066 times, code 655363: 439 times, code 655372: 8 times, code 655365: 7 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.04.023",
+      "total_errors": 3642
+    }
+  },
+  {
+    "id": "error_stats_INV_0104024",
+    "text": "Inverter INV 01.04.024 error statistics: total non-zero error events = 2,323. Top error codes: code 589831: 1096 times, code 655626: 758 times, code 655616: 419 times, code 655363: 23 times, code 589850: 11 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.04.024",
+      "total_errors": 2323
+    }
+  },
+  {
+    "id": "error_stats_INV_0104025",
+    "text": "Inverter INV 01.04.025 error statistics: total non-zero error events = 2,435. Top error codes: code 655626: 1467 times, code 655616: 794 times, code 655363: 145 times, code 655369: 11 times, code 655366: 9 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.04.025",
+      "total_errors": 2435
+    }
+  },
+  {
+    "id": "error_stats_INV_0104026",
+    "text": "Inverter INV 01.04.026 error statistics: total non-zero error events = 5,296. Top error codes: code 655626: 3280 times, code 589831: 1450 times, code 655616: 504 times, code 655363: 33 times, code 589850: 17 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.04.026",
+      "total_errors": 5296
+    }
+  },
+  {
+    "id": "error_stats_INV_0104027",
+    "text": "Inverter INV 01.04.027 error statistics: total non-zero error events = 2,790. Top error codes: code 655626: 1506 times, code 655616: 730 times, code 655363: 531 times, code 655366: 7 times, code 655379: 5 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.04.027",
+      "total_errors": 2790
+    }
+  },
+  {
+    "id": "error_stats_INV_0104028",
+    "text": "Inverter INV 01.04.028 error statistics: total non-zero error events = 2,312. Top error codes: code 655626: 947 times, code 655616: 676 times, code 655625: 645 times, code 655624: 29 times, code 655363: 13 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.04.028",
+      "total_errors": 2312
+    }
+  },
+  {
+    "id": "error_stats_INV_0105029",
+    "text": "Inverter INV 01.05.029 error statistics: total non-zero error events = 4,768. Top error codes: code 655626: 3408 times, code 655616: 1065 times, code 655363: 270 times, code 655366: 9 times, code 655379: 9 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.05.029",
+      "total_errors": 4768
+    }
+  },
+  {
+    "id": "error_stats_INV_0105030",
+    "text": "Inverter INV 01.05.030 error statistics: total non-zero error events = 2,630. Top error codes: code 655626: 1853 times, code 655616: 454 times, code 983296: 203 times, code 655363: 107 times, code 655365: 8 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.05.030",
+      "total_errors": 2630
+    }
+  },
+  {
+    "id": "error_stats_INV_0105031",
+    "text": "Inverter INV 01.05.031 error statistics: total non-zero error events = 2,439. Top error codes: code 655626: 1467 times, code 655616: 934 times, code 655363: 18 times, code 655365: 9 times, code 655366: 6 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.05.031",
+      "total_errors": 2439
+    }
+  },
+  {
+    "id": "error_stats_INV_0105032",
+    "text": "Inverter INV 01.05.032 error statistics: total non-zero error events = 5,251. Top error codes: code 655616: 2635 times, code 655626: 2536 times, code 655379: 49 times, code 983300: 16 times, code 983296: 9 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.05.032",
+      "total_errors": 5251
+    }
+  },
+  {
+    "id": "error_stats_INV_0105033",
+    "text": "Inverter INV 01.05.033 error statistics: total non-zero error events = 5,227. Top error codes: code 655626: 3141 times, code 589831: 1449 times, code 655616: 608 times, code 589850: 15 times, code 655363: 6 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.05.033",
+      "total_errors": 5227
+    }
+  },
+  {
+    "id": "error_stats_INV_0105034",
+    "text": "Inverter INV 01.05.034 error statistics: total non-zero error events = 2,336. Top error codes: code 655626: 1551 times, code 655616: 745 times, code 655363: 23 times, code 655366: 12 times, code 655365: 4 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.05.034",
+      "total_errors": 2336
+    }
+  },
+  {
+    "id": "error_stats_INV_0105035",
+    "text": "Inverter INV 01.05.035 error statistics: total non-zero error events = 2,386. Top error codes: code 655626: 2105 times, code 655616: 237 times, code 655363: 29 times, code 655371: 14 times, code 655379: 1 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.05.035",
+      "total_errors": 2386
+    }
+  },
+  {
+    "id": "error_stats_INV_0106036",
+    "text": "Inverter INV 01.06.036 error statistics: total non-zero error events = 16,107. Top error codes: code 655626: 12885 times, code 655616: 2818 times, code 655379: 190 times, code 655620: 113 times, code 655624: 58 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.06.036",
+      "total_errors": 16107
+    }
+  },
+  {
+    "id": "error_stats_INV_0106037",
+    "text": "Inverter INV 01.06.037 error statistics: total non-zero error events = 17,581. Top error codes: code 655616: 15033 times, code 655626: 2378 times, code 655379: 69 times, code 655624: 58 times, code 655363: 38 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.06.037",
+      "total_errors": 17581
+    }
+  },
+  {
+    "id": "error_stats_INV_0106038",
+    "text": "Inverter INV 01.06.038 error statistics: total non-zero error events = 2,929. Top error codes: code 655616: 1521 times, code 655626: 1251 times, code 655624: 113 times, code 262145: 21 times, code 655379: 9 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.06.038",
+      "total_errors": 2929
+    }
+  },
+  {
+    "id": "error_stats_INV_0106039",
+    "text": "Inverter INV 01.06.039 error statistics: total non-zero error events = 3,222. Top error codes: code 655626: 1586 times, code 655616: 1161 times, code 655363: 353 times, code 655624: 111 times, code 655374: 4 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.06.039",
+      "total_errors": 3222
+    }
+  },
+  {
+    "id": "error_stats_INV_0106040",
+    "text": "Inverter INV 01.06.040 error statistics: total non-zero error events = 2,802. Top error codes: code 655625: 1328 times, code 655626: 980 times, code 655616: 392 times, code 655363: 60 times, code 655371: 26 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.06.040",
+      "total_errors": 2802
+    }
+  },
+  {
+    "id": "error_stats_INV_0106041",
+    "text": "Inverter INV 01.06.041 error statistics: total non-zero error events = 3,145. Top error codes: code 655616: 1676 times, code 655626: 1329 times, code 655624: 127 times, code 655363: 5 times, code 655374: 3 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.06.041",
+      "total_errors": 3145
+    }
+  },
+  {
+    "id": "error_stats_INV_0106042",
+    "text": "Inverter INV 01.06.042 error statistics: total non-zero error events = 2,783. Top error codes: code 655626: 1711 times, code 655616: 1003 times, code 655363: 38 times, code 655369: 17 times, code 655366: 7 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.06.042",
+      "total_errors": 2783
+    }
+  },
+  {
+    "id": "error_stats_INV_0106043",
+    "text": "Inverter INV 01.06.043 error statistics: total non-zero error events = 2,854. Top error codes: code 655625: 2265 times, code 655616: 401 times, code 655363: 67 times, code 655626: 58 times, code 655624: 31 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.06.043",
+      "total_errors": 2854
+    }
+  },
+  {
+    "id": "error_stats_INV_0107044",
+    "text": "Inverter INV 01.07.044 error statistics: total non-zero error events = 4,945. Top error codes: code 655616: 3104 times, code 655626: 1792 times, code 655363: 16 times, code 655365: 10 times, code 655371: 6 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.07.044",
+      "total_errors": 4945
+    }
+  },
+  {
+    "id": "error_stats_INV_0107045",
+    "text": "Inverter INV 01.07.045 error statistics: total non-zero error events = 2,764. Top error codes: code 655626: 1665 times, code 655616: 1036 times, code 655363: 35 times, code 655365: 10 times, code 655366: 10 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.07.045",
+      "total_errors": 2764
+    }
+  },
+  {
+    "id": "error_stats_INV_0107046",
+    "text": "Inverter INV 01.07.046 error statistics: total non-zero error events = 3,177. Top error codes: code 655626: 1577 times, code 655616: 1157 times, code 655363: 387 times, code 655372: 16 times, code 655365: 15 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.07.046",
+      "total_errors": 3177
+    }
+  },
+  {
+    "id": "error_stats_INV_0107047",
+    "text": "Inverter INV 01.07.047 error statistics: total non-zero error events = 3,275. Top error codes: code 655626: 1616 times, code 655616: 1573 times, code 655379: 37 times, code 655363: 18 times, code 655371: 8 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.07.047",
+      "total_errors": 3275
+    }
+  },
+  {
+    "id": "error_stats_INV_0107048",
+    "text": "Inverter INV 01.07.048 error statistics: total non-zero error events = 3,283. Top error codes: code 655626: 1327 times, code 655616: 1176 times, code 655363: 584 times, code 655365: 180 times, code 655366: 10 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.07.048",
+      "total_errors": 3283
+    }
+  },
+  {
+    "id": "error_stats_INV_0107049",
+    "text": "Inverter INV 01.07.049 error statistics: total non-zero error events = 3,650. Top error codes: code 655616: 1919 times, code 655626: 1658 times, code 655363: 21 times, code 655379: 13 times, code 655366: 8 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.07.049",
+      "total_errors": 3650
+    }
+  },
+  {
+    "id": "error_stats_INV_0107050",
+    "text": "Inverter INV 01.07.050 error statistics: total non-zero error events = 2,972. Top error codes: code 655626: 1658 times, code 655616: 1087 times, code 655363: 202 times, code 655365: 10 times, code 655366: 8 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.07.050",
+      "total_errors": 2972
+    }
+  },
+  {
+    "id": "error_stats_INV_0107051",
+    "text": "Inverter INV 01.07.051 error statistics: total non-zero error events = 2,813. Top error codes: code 655626: 1635 times, code 655616: 1103 times, code 655363: 46 times, code 655379: 9 times, code 655366: 8 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.07.051",
+      "total_errors": 2813
+    }
+  },
+  {
+    "id": "error_stats_INV_0108052",
+    "text": "Inverter INV 01.08.052 error statistics: total non-zero error events = 2,270. Top error codes: code 655626: 1287 times, code 655616: 932 times, code 655363: 18 times, code 655366: 13 times, code 655371: 9 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.08.052",
+      "total_errors": 2270
+    }
+  },
+  {
+    "id": "error_stats_INV_0108053",
+    "text": "Inverter INV 01.08.053 error statistics: total non-zero error events = 17,816. Top error codes: code 655361: 14182 times, code 655626: 1649 times, code 655616: 877 times, code 655363: 501 times, code 983296: 388 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.08.053",
+      "total_errors": 17816
+    }
+  },
+  {
+    "id": "error_stats_INV_0108054",
+    "text": "Inverter INV 01.08.054 error statistics: total non-zero error events = 2,447. Top error codes: code 655626: 1377 times, code 655616: 978 times, code 655379: 58 times, code 655363: 13 times, code 655365: 11 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.08.054",
+      "total_errors": 2447
+    }
+  },
+  {
+    "id": "error_stats_INV_0108055",
+    "text": "Inverter INV 01.08.055 error statistics: total non-zero error events = 4,115. Top error codes: code 655626: 1496 times, code 655363: 1341 times, code 655616: 902 times, code 589828: 181 times, code 655379: 137 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.08.055",
+      "total_errors": 4115
+    }
+  },
+  {
+    "id": "error_stats_INV_0108056",
+    "text": "Inverter INV 01.08.056 error statistics: total non-zero error events = 2,272. Top error codes: code 655626: 1343 times, code 655616: 883 times, code 655363: 20 times, code 655365: 10 times, code 655366: 9 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.08.056",
+      "total_errors": 2272
+    }
+  },
+  {
+    "id": "error_stats_INV_0108057",
+    "text": "Inverter INV 01.08.057 error statistics: total non-zero error events = 21,640. Top error codes: code 655361: 14817 times, code 655616: 5221 times, code 655626: 1494 times, code 655363: 57 times, code 983296: 28 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.08.057",
+      "total_errors": 21640
+    }
+  },
+  {
+    "id": "error_stats_INV_0108058",
+    "text": "Inverter INV 01.08.058 error statistics: total non-zero error events = 48,551. Top error codes: code 655626: 38240 times, code 655616: 6995 times, code 983300: 1747 times, code 655361: 899 times, code 655363: 624 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.08.058",
+      "total_errors": 48551
+    }
+  },
+  {
+    "id": "error_stats_INV_0108059",
+    "text": "Inverter INV 01.08.059 error statistics: total non-zero error events = 2,920. Top error codes: code 655626: 1285 times, code 655616: 1185 times, code 655363: 404 times, code 655379: 19 times, code 655366: 13 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.08.059",
+      "total_errors": 2920
+    }
+  },
+  {
+    "id": "error_stats_INV_0109060",
+    "text": "Inverter INV 01.09.060 error statistics: total non-zero error events = 14,563. Top error codes: code 655626: 9122 times, code 655616: 5208 times, code 983296: 203 times, code 655379: 11 times, code 655363: 10 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.09.060",
+      "total_errors": 14563
+    }
+  },
+  {
+    "id": "error_stats_INV_0109061",
+    "text": "Inverter INV 01.09.061 error statistics: total non-zero error events = 2,290. Top error codes: code 589831: 1548 times, code 655626: 424 times, code 655616: 223 times, code 655363: 73 times, code 589850: 16 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.09.061",
+      "total_errors": 2290
+    }
+  },
+  {
+    "id": "error_stats_INV_0109062",
+    "text": "Inverter INV 01.09.062 error statistics: total non-zero error events = 46,854. Top error codes: code 655626: 32239 times, code 655616: 11571 times, code 655362: 1848 times, code 655363: 908 times, code 851971: 277 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.09.062",
+      "total_errors": 46854
+    }
+  },
+  {
+    "id": "error_stats_INV_0109063",
+    "text": "Inverter INV 01.09.063 error statistics: total non-zero error events = 2,108. Top error codes: code 655626: 1186 times, code 655616: 840 times, code 655363: 57 times, code 655366: 15 times, code 655365: 5 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.09.063",
+      "total_errors": 2108
+    }
+  },
+  {
+    "id": "error_stats_INV_0109064",
+    "text": "Inverter INV 01.09.064 error statistics: total non-zero error events = 2,075. Top error codes: code 655626: 1092 times, code 655616: 835 times, code 655363: 141 times, code 655366: 3 times, code 655365: 1 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.09.064",
+      "total_errors": 2075
+    }
+  },
+  {
+    "id": "error_stats_INV_0109065",
+    "text": "Inverter INV 01.09.065 error statistics: total non-zero error events = 2,921. Top error codes: code 655626: 1146 times, code 655363: 927 times, code 655616: 809 times, code 655366: 19 times, code 655365: 7 times. ",
+    "metadata": {
+      "source": "error_stats",
+      "inverter": "INV 01.09.065",
+      "total_errors": 2921
+    }
+  },
+  {
+    "id": "error_stats_plant_summary",
+    "text": "Plant A overall error statistics: Dataset spans from early 2017 to June 2026 at 5-minute intervals. Total error events across all 65 inverters: 34,899,627. Top 10 worst inverters by error count: INV 01.09.062: 580,704, INV 01.08.058: 576,146, INV 01.05.032: 565,745, INV 01.05.030: 563,954, INV 01.04.023: 563,245, INV 01.05.033: 563,036, INV 01.05.035: 559,354, INV 01.03.017: 559,348, INV 01.05.034: 559,149, INV 01.04.027: 558,863.",
+    "metadata": {
+      "source": "error_stats",
+      "type": "plant_summary",
+      "total_error_events": 34899627
+    }
+  }
+]

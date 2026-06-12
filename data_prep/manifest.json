@@ -1,0 +1,12 @@
+{
+  "description": "Plant A RAG data chunks",
+  "chunk_files": [
+    "error_stats.json",
+    "operational_states.json",
+    "error_descriptions.json",
+    "system_overview.json",
+    "tickets.json",
+    "feed_in_tariffs.json"
+  ],
+  "instructions_for_rag_teammate": "Load each JSON file. Each file contains a list of chunk dicts with keys: 'id' (unique str), 'text' (embed this), 'metadata' (store for filtering). Embed 'text' field and store in ChromaDB with metadata. The pandas query tool (data_query_tool.py) can answer live numerical questions using the parquet directly."
+}
