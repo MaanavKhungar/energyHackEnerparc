@@ -1,39 +1,19 @@
-"""
-Plant A Energy Chatbot — Agentic
-=================================
-Architecture:
-  - Plant A chunks + Plant A PDF  → baked into system prompt (always in context)
-  - PV Handbook                   → RAG teammate plugs in retrieve_handbook()
-  - Live tools                    → pandas queries on raw parquet/xlsx
-
-Usage:
-    python chat.py                  # interactive terminal chat
-    python chat.py --demo           # runs demo questions
-
-RAG teammate integration:
-    Replace retrieve_handbook() with your ChromaDB/FAISS query.
-    Everything else is hands-off.
-"""
-
 import argparse
 import json
 import sys
 from pathlib import Path
 
-import fitz  # pymupdf
+import fitz
 import anthropic
 
 ROOT = Path(__file__).parent
 CHUNKS_DIR = ROOT / "data_prep" / "chunks"
 
 sys.path.insert(0, str(ROOT / "data_prep"))
-from data_query_tool import TOOLS, execute_tool  # noqa: E402
+from data_query_tool import TOOLS, execute_tool
 
-
-# ── 1. Plant A static knowledge (baked in — never changes per query) ───────────
 
 def _load_all_chunks() -> str:
-    """Load all pre-computed plant chunks into a single context string."""
     lines = []
     for path in sorted(CHUNKS_DIR.glob("*.json")):
         with open(path) as f:
@@ -44,20 +24,17 @@ def _load_all_chunks() -> str:
 
 
 def _load_plant_pdf() -> str:
-    """Extract text from the Plant A general info PDF."""
     pdf_path = Path(
         "/Users/krishnamavani/Documents/Energy Hackathon"
         "/Plant A (start here)"
         "/(please read first) General information plant A.pdf"
     )
     if not pdf_path.exists():
-        print("[warn] Plant A PDF not found, skipping.")
         return ""
     doc = fitz.open(str(pdf_path))
     return "\n".join(page.get_text() for page in doc).strip()
 
 
-# Build once at startup — injected into every request
 _PLANT_CHUNKS_TEXT = _load_all_chunks()
 _PLANT_PDF_TEXT = _load_plant_pdf()
 
@@ -65,32 +42,14 @@ print(f"[startup] Plant chunks: ~{len(_PLANT_CHUNKS_TEXT)//4:,} tokens")
 print(f"[startup] Plant PDF:    ~{len(_PLANT_PDF_TEXT)//4:,} tokens")
 
 
-# ── 2. Handbook RAG (RAG teammate plugs in here) ───────────────────────────────
-
 def retrieve_handbook(question: str, top_k: int = 5) -> str:
-    """
-    Retrieve relevant pages from the PV Handbook for a given question.
-
-    RAG TEAMMATE — replace this function body with your ChromaDB query:
-
-        results = collection.query(query_texts=[question], n_results=top_k)
-        pages = results["documents"][0]
-        meta  = results["metadatas"][0]
-        return "\\n\\n".join(
-            f"[Handbook p.{m['page']}] {t}"
-            for t, m in zip(pages, meta)
-        )
-
-    Keep the same signature: (question: str, top_k: int) -> str
-    """
-    # Placeholder until RAG teammate hooks in
+    # RAG teammate: replace this body with your ChromaDB query
+    # results = collection.query(query_texts=[question], n_results=top_k)
+    # return "\n\n".join(results["documents"][0])
     return ""
 
 
-# ── 3. System prompt ───────────────────────────────────────────────────────────
-
-BASE_SYSTEM = """You are an expert energy analyst for Plant A, a 1,897 kWp \
-utility-scale solar plant managed by EnerParc.
+BASE_SYSTEM = """You are an expert energy analyst for Plant A, a 1,897 kWp utility-scale solar plant managed by EnerParc.
 
 ## Plant structure
 - 65 inverters (INV 01.01.001 → INV 01.09.065) across 9 substations
@@ -114,24 +73,18 @@ utility-scale solar plant managed by EnerParc.
 4. Make multiple tool calls if needed — thoroughness matters
 
 ## Audience
-EnerParc operations and asset management staff.
-Be concise and actionable.
+EnerParc operations and asset management staff. Be concise and actionable.
 """
 
 
 def build_system_prompt(handbook_context: str) -> str:
     parts = [BASE_SYSTEM]
-
     parts.append("## Plant A documentation\n" + _PLANT_PDF_TEXT)
     parts.append("## Plant A knowledge base\n" + _PLANT_CHUNKS_TEXT)
-
     if handbook_context.strip():
         parts.append("## Relevant PV engineering reference\n" + handbook_context)
-
     return "\n\n---\n\n".join(parts)
 
-
-# ── 4. Agentic chat loop ───────────────────────────────────────────────────────
 
 class PlantAChatbot:
     def __init__(self):
@@ -139,13 +92,12 @@ class PlantAChatbot:
         self.messages: list[dict] = []
 
     def chat(self, user_message: str, verbose: bool = False) -> str:
-        # Retrieve handbook context (empty until RAG teammate hooks in)
         handbook_ctx = retrieve_handbook(user_message)
         system = build_system_prompt(handbook_ctx)
 
         self.messages.append({"role": "user", "content": user_message})
 
-        for iteration in range(8):  # safety cap
+        for _ in range(8):
             response = self.client.messages.create(
                 model="claude-opus-4-8",
                 max_tokens=4096,
@@ -158,9 +110,7 @@ class PlantAChatbot:
             self.messages.append({"role": "assistant", "content": response.content})
 
             if response.stop_reason == "end_turn":
-                return next(
-                    (b.text for b in response.content if b.type == "text"), ""
-                )
+                return next((b.text for b in response.content if b.type == "text"), "")
 
             if response.stop_reason == "tool_use":
                 tool_results = []
@@ -170,8 +120,7 @@ class PlantAChatbot:
                             print(f"  🔧 {block.name}({json.dumps(block.input, separators=(',',':'))})")
                         result = execute_tool(block.name, block.input)
                         if verbose:
-                            preview = result[:200] + "..." if len(result) > 200 else result
-                            print(f"     → {preview}")
+                            print(f"     → {result[:200]}{'...' if len(result) > 200 else ''}")
                         tool_results.append({
                             "type": "tool_result",
                             "tool_use_id": block.id,
@@ -185,8 +134,6 @@ class PlantAChatbot:
         self.messages = []
 
 
-# ── 5. Demo questions ──────────────────────────────────────────────────────────
-
 DEMO_QUESTIONS = [
     "Give me a plant overview — capacity, inverter count, data range.",
     "Which 3 inverters had the most errors in 2023?",
@@ -195,8 +142,6 @@ DEMO_QUESTIONS = [
     "Show the error trend for INV 01.09.062 by year.",
 ]
 
-
-# ── 6. Entry point ─────────────────────────────────────────────────────────────
 
 def run_interactive():
     bot = PlantAChatbot()
