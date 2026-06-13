@@ -470,48 +470,116 @@ def render_digital_twin_page() -> None:
                     )
 
                 with col3:
+                    free_weekly = crew.get("capacity", {}).get("free_weekly", 0)
+                    soonest     = crew.get("soonest_slot", "—")
                     st.metric(
-                        "Crew Status",
-                        crew['available_crew'],
-                        crew['soonest_slot']
+                        "Field Capacity",
+                        f"{free_weekly}h / week",
+                        f"Next slot: {soonest}",
                     )
-                    st.caption("🏗️ MOCK crew data")
+                    st.caption("🏗️ MOCK")
 
-                # Decision
+                # ── O&M Decision ───────────────────────────────────────────
                 verdict = result['verdict']
-                decision_colors = {
-                    "do_nothing": ("🟢", "success"),
-                    "monitor": ("🟡", "warning"),
-                    "act": ("🔴", "error")
+                decision_styles = {
+                    "do_nothing": ("🟢", "#1a3a1a", "#2fbf71", "DO NOTHING"),
+                    "monitor":    ("🟡", "#2e2a00", "#f0c040", "MONITOR"),
+                    "act":        ("🔴", "#3a1a1a", "#d52020", "ACT NOW"),
                 }
-                emoji, alert_type = decision_colors.get(verdict['decision'], ("❓", "info"))
+                dec = verdict.get('decision', 'monitor')
+                icon, bg, border, label = decision_styles.get(dec, ("⚪", "#1a1a2e", "#888", dec.upper()))
 
-                st.markdown("### 🎯 O&M Decision")
-                getattr(st, alert_type)(
-                    f"{emoji} **{verdict['decision'].upper().replace('_', ' ')}** — {verdict['reasoning']}"
-                )
+                st.markdown("### Maintenance Decision")
 
-                if verdict.get('dissent_note'):
-                    st.warning(f"⚠️ **Tension noted:** {verdict['dissent_note']}")
+                d_left, d_right = st.columns([1, 1])
 
-                # Service ticket if needed
+                # Left — decision badge only
+                with d_left:
+                    st.markdown(
+                        f"""<div style='
+                            background:{bg}; border-left:4px solid {border};
+                            border-radius:6px; padding:28px 24px; height:100%;
+                            display:flex; align-items:center'>
+                            <div style='font-size:18px;font-weight:700;color:{border}'>
+                                {icon} {label}
+                            </div>
+                        </div>""",
+                        unsafe_allow_html=True,
+                    )
+
+                # Right — short reasoning (2-3 sentences max)
+                with d_right:
+                    # Trim reasoning to first 2 sentences
+                    full   = verdict.get('reasoning', '')
+                    import re
+                    # Split on '. ' but NOT on decimal numbers like 55.1
+                    sents  = [s.strip() for s in re.split(r'(?<=\D)\.\s+', full) if s.strip()]
+                    sents  = [s.replace('REVENUE:','').replace('RISK:','').replace('CREW:','').strip() for s in sents]
+                    sents  = [s for s in sents if s]
+                    short  = ' '.join(sents[:2]) if sents else full
+                    dissent = verdict.get('dissent_note', '')
+                    # Trim dissent too
+                    dissent_short = dissent.split('.')[0] + '.' if dissent else ''
+
+                    st.markdown(
+                        f"""<div style='
+                            background:#0e1117; border:1px solid #2a2d35;
+                            border-radius:6px; padding:20px 24px; height:100%'>
+                            <div style='font-size:11px;color:#8b95a8;margin-bottom:8px;
+                                        text-transform:uppercase;letter-spacing:0.08em'>
+                                Why this decision
+                            </div>
+                            <p style='color:#c9d1d9;font-size:14px;line-height:1.8;margin:0 0 10px'>
+                                {short}
+                            </p>
+                            {f'''<p style="color:#a89060;font-size:14px;line-height:1.7;
+                                          border-top:1px solid #2a2d35;padding-top:8px;margin:0">
+                                ⚠️ {dissent_short}
+                            </p>''' if dissent_short else ''}
+                        </div>""",
+                        unsafe_allow_html=True,
+                    )
+
+                # Draft ticket — compact
                 if verdict.get('draft_ticket'):
-                    st.markdown("### 📋 Draft Service Ticket")
-                    st.json(verdict['draft_ticket'])
+                    ticket = verdict['draft_ticket']
+                    st.markdown(
+                        f"""<div style='
+                            background:#0e1a2e;border-left:4px solid #4a90d9;
+                            border-radius:6px;padding:10px 16px;margin-bottom:12px;
+                            color:#c9d1d9;font-size:13px'>
+                            📋 <b>Draft ticket:</b> {ticket.get('title','—')}
+                            · Priority: <b>{ticket.get('priority','—')}</b>
+                            · Due: {ticket.get('due_date','—')}
+                        </div>""",
+                        unsafe_allow_html=True,
+                    )
 
-                # Tool traces (expandable)
+                # Detailed breakdown (expandable)
                 with st.expander("📊 Detailed Analysis"):
-                    st.markdown("**Revenue Analysis:**")
-                    st.write(revenue['trace'])
-                    st.json(revenue)
+                    c_rev, c_risk, c_crew = st.columns(3)
 
-                    st.markdown("**Risk Assessment:**")
-                    st.write(risk['trace'])
-                    st.json(risk)
+                    with c_rev:
+                        st.markdown("**💰 Revenue**")
+                        st.metric("Loss",         f"€{revenue.get('euro_loss',0):,.0f}")
+                        st.metric("Energy lost",  f"{revenue.get('lost_kwh',0):,.0f} kWh")
+                        st.metric("Downtime",     f"{revenue.get('total_fault_hours',0):.1f}h")
+                        st.metric("Rate",         f"€{revenue.get('euro_per_week',0):.0f}/week")
 
-                    st.markdown("**Crew Check:**")
-                    st.write(crew['trace'])
-                    st.json(crew)
+                    with c_risk:
+                        st.markdown("**⚠️ Risk**")
+                        st.metric("Severity",     f"{risk.get('severity_0_100',0):.0f}/100")
+                        st.metric("Band",         risk.get('band','—').upper())
+                        st.metric("Error codes",  len(risk.get('active_codes',[])))
+                        st.metric("Trend",        risk.get('trend','—'))
+
+                    with c_crew:
+                        st.markdown("**👷 Capacity**")
+                        cap = crew.get('capacity', {})
+                        st.metric("Free",         f"{cap.get('free_hours',0)}h")
+                        st.metric("Gross",        f"{cap.get('gross_hours',0)}h")
+                        st.metric("Routine alloc",f"{cap.get('routine_hours',0)}h")
+                        st.metric("Next slot",    crew.get('soonest_slot','—'))
 
             except Exception as e:
                 st.error(f"❌ Analysis failed: {str(e)}")

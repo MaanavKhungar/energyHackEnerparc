@@ -349,8 +349,8 @@ def analyze_revenue(zone_id: str, start_date: str, end_date: str) -> dict:
         "A.004": ["INV 01.05.029", "INV 01.05.030", "INV 01.05.031", "INV 01.05.032", "INV 01.05.033", "INV 01.05.034", "INV 01.05.035"],
         "B.018": ["INV 01.06.036", "INV 01.06.037", "INV 01.06.038", "INV 01.06.039", "INV 01.06.040", "INV 01.06.041", "INV 01.06.042", "INV 01.06.043"],
         "B.013": ["INV 01.07.044", "INV 01.07.045", "INV 01.07.046", "INV 01.07.047", "INV 01.07.048", "INV 01.07.049", "INV 01.07.050", "INV 01.07.051"],
-        "B.008": ["INV 01.08.052", "INV 01.08.053", "INV 01.08.054", "INV 01.08.055", "INV 01.08.056", "INV 01.08.057", "INV 01.08.058", "INV 01.08.059"],
-        "B.003": ["INV 01.09.060", "INV 01.09.061", "INV 01.09.062", "INV 01.09.063", "INV 01.09.064", "INV 01.09.065"]
+        "B.009": ["INV 01.08.052", "INV 01.08.053", "INV 01.08.054", "INV 01.08.055", "INV 01.08.056", "INV 01.08.057", "INV 01.08.058", "INV 01.08.059"],
+        "B.004": ["INV 01.09.060", "INV 01.09.061", "INV 01.09.062", "INV 01.09.063", "INV 01.09.064", "INV 01.09.065"]
     }
 
     zone_inverters = ZONE_MAPPING.get(zone_id, [])
@@ -444,8 +444,8 @@ def score_risk(zone_id: str, start_date: str, end_date: str) -> dict:
         "A.004": ["INV 01.05.029", "INV 01.05.030", "INV 01.05.031", "INV 01.05.032", "INV 01.05.033", "INV 01.05.034", "INV 01.05.035"],
         "B.018": ["INV 01.06.036", "INV 01.06.037", "INV 01.06.038", "INV 01.06.039", "INV 01.06.040", "INV 01.06.041", "INV 01.06.042", "INV 01.06.043"],
         "B.013": ["INV 01.07.044", "INV 01.07.045", "INV 01.07.046", "INV 01.07.047", "INV 01.07.048", "INV 01.07.049", "INV 01.07.050", "INV 01.07.051"],
-        "B.008": ["INV 01.08.052", "INV 01.08.053", "INV 01.08.054", "INV 01.08.055", "INV 01.08.056", "INV 01.08.057", "INV 01.08.058", "INV 01.08.059"],
-        "B.003": ["INV 01.09.060", "INV 01.09.061", "INV 01.09.062", "INV 01.09.063", "INV 01.09.064", "INV 01.09.065"]
+        "B.009": ["INV 01.08.052", "INV 01.08.053", "INV 01.08.054", "INV 01.08.055", "INV 01.08.056", "INV 01.08.057", "INV 01.08.058", "INV 01.08.059"],
+        "B.004": ["INV 01.09.060", "INV 01.09.061", "INV 01.09.062", "INV 01.09.063", "INV 01.09.064", "INV 01.09.065"]
     }
 
     zone_inverters = zone_mapping.get(zone_id, [])
@@ -502,37 +502,105 @@ def score_risk(zone_id: str, start_date: str, end_date: str) -> dict:
     }
 
 
-def check_crew(start_date: str, end_date: str) -> dict:
+def check_crew(start_date: str, end_date: str, faulted_inverters: int = 0) -> dict:
     """
-    Check crew availability for maintenance work.
-    MOCK implementation - clearly labeled as stub.
+    Check field crew capacity for a given maintenance window.
+
+    Returns a weekly capacity breakdown:
+      - gross capacity (technician-hours per week)
+      - already allocated to routine work
+      - free capacity available for reactive faults
+      - hours estimated to fix current faults
+      - utilisation % so the agent can judge urgency
+
+    MOCK implementation — integrate with real scheduling system.
+    Task time estimates (industry standard for utility-scale PV):
+      - Inspection/diagnosis:     1.5h per inverter
+      - Component swap (minor):   3h per inverter
+      - Board/hardware replace:   5h per inverter
+    We use 3h as a conservative default for "unknown fault type".
     """
-    import random
     from datetime import datetime, timedelta
 
-    # Mock crew data
-    crews = ["Team_Alpha", "Team_Beta", "Team_Gamma"]
-
-    # Generate mock availability
     start = datetime.fromisoformat(start_date)
-    available_dates = []
+    end   = datetime.fromisoformat(end_date)
 
-    for i in range(1, 8):  # Next 7 days
-        date = start + timedelta(days=i)
-        if date.weekday() < 5:  # Weekdays only
-            available_dates.append(date.strftime("%Y-%m-%d %H:%M"))
+    days_in_window = (end - start).days + 1
+    weeks_in_window = max(days_in_window / 7, 1)
 
-    soonest_slot = available_dates[0] if available_dates else "No slots available"
-    available_crew = random.choice(crews)
+    working_days = sum(
+        1 for i in range(days_in_window)
+        if (start + timedelta(days=i)).weekday() < 5
+    )
+
+    # ── Capacity model (mock — replace with real HR/scheduling data) ──
+    technicians       = 2
+    hours_per_day     = 8
+    gross_weekly_h    = technicians * 5 * hours_per_day   # 80h/week for 2 techs
+
+    # Routine allocation: ~30% of capacity goes to scheduled preventive maintenance
+    routine_pct       = 0.30
+    routine_weekly_h  = round(gross_weekly_h * routine_pct)
+    free_weekly_h     = gross_weekly_h - routine_weekly_h
+
+    # Scale to the actual window
+    gross_h   = round(gross_weekly_h   * weeks_in_window)
+    routine_h = round(routine_weekly_h * weeks_in_window)
+    free_h    = round(free_weekly_h    * weeks_in_window)
+
+    # Estimate hours needed for current faults (3h per inverter, default)
+    hours_per_inverter  = 3
+    hours_needed        = faulted_inverters * hours_per_inverter
+    utilisation_pct     = round(min(hours_needed / max(free_h, 1) * 100, 200))
+    can_handle          = free_h // hours_per_inverter
+
+    # Urgency signal based on utilisation
+    if utilisation_pct == 0:
+        urgency = "no_action"
+    elif utilisation_pct <= 50:
+        urgency = "routine"
+    elif utilisation_pct <= 100:
+        urgency = "prioritise"
+    else:
+        urgency = "overloaded"  # faults exceed free capacity → escalate or defer
+
+    # Always compute next slot from today, not from analysis start date
+    from datetime import date as _date
+    today = datetime.today()
+    soonest_slot = None
+    for i in range(1, 14):
+        d = today + timedelta(days=i)
+        if d.weekday() < 5:
+            soonest_slot = d.strftime("%Y-%m-%d")
+            break
 
     return {
         "mock": True,
-        "crews": crews,
-        "available_crew": available_crew,
-        "soonest_slot": soonest_slot,
-        "available_slots": available_dates[:3],  # Next 3 available
-        "note": "MOCK DATA - Integration point for real crew scheduling system",
-        "trace": f"MOCK: Crew {available_crew} available {soonest_slot}"
+        "technicians": technicians,
+        "working_days_in_window": working_days,
+        "capacity": {
+            "gross_hours":   gross_h,
+            "routine_hours": routine_h,
+            "free_hours":    free_h,
+            "gross_weekly":  gross_weekly_h,
+            "free_weekly":   free_weekly_h,
+        },
+        "fault_demand": {
+            "faulted_inverters":  faulted_inverters,
+            "hours_needed":       hours_needed,
+            "hours_per_inverter": hours_per_inverter,
+            "can_handle":         can_handle,
+            "utilisation_pct":    utilisation_pct,
+            "urgency":            urgency,
+        },
+        "available_crew": f"{technicians} technicians · {free_h}h free",
+        "soonest_slot": soonest_slot or "No slots",
+        "note": "MOCK DATA — integrate with real crew scheduling system",
+        "trace": (
+            f"Capacity: {free_h}h free of {gross_h}h gross ({routine_h}h routine). "
+            f"Fault demand: {faulted_inverters} inverters × {hours_per_inverter}h = {hours_needed}h needed. "
+            f"Utilisation: {utilisation_pct}% ({urgency})"
+        ),
     }
 
 
@@ -642,7 +710,7 @@ TOOLS = [
             "properties": {
                 "zone_id": {
                     "type": "string",
-                    "description": "Zone identifier (A.019, A.014, A.010, A.007, A.004, B.018, B.013, B.008, B.003)",
+                    "description": "Zone identifier (A.019, A.014, A.010, A.007, A.004, B.018, B.013, B.009, B.004)",
                 },
                 "start_date": {"type": "string", "description": "Start date YYYY-MM-DD"},
                 "end_date": {"type": "string", "description": "End date YYYY-MM-DD"},
@@ -662,7 +730,7 @@ TOOLS = [
             "properties": {
                 "zone_id": {
                     "type": "string",
-                    "description": "Zone identifier (A.019, A.014, A.010, A.007, A.004, B.018, B.013, B.008, B.003)",
+                    "description": "Zone identifier (A.019, A.014, A.010, A.007, A.004, B.018, B.013, B.009, B.004)",
                 },
                 "start_date": {"type": "string", "description": "Start date YYYY-MM-DD"},
                 "end_date": {"type": "string", "description": "End date YYYY-MM-DD"},
