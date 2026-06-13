@@ -3,13 +3,12 @@ import base64
 import json
 import mimetypes
 from pathlib import Path
-from datetime import datetime
+from datetime import timedelta
 
 import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "data_prep"))
@@ -485,7 +484,6 @@ def render_digital_twin_page() -> None:
         sys.path.insert(0, str(Path(__file__).parent.parent))
         from watts_wrong import WattsWrongAgent
 
-        from datetime import timedelta
 
         # Calculate date range
         end_date = end_dt.date()

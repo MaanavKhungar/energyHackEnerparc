@@ -565,7 +565,6 @@ def check_crew(start_date: str, end_date: str, faulted_inverters: int = 0) -> di
         urgency = "overloaded"  # faults exceed free capacity → escalate or defer
 
     # Always compute next slot from today, not from analysis start date
-    from datetime import date as _date
     today = datetime.today()
     soonest_slot = None
     for i in range(1, 14):
