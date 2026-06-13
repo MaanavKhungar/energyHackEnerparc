@@ -377,7 +377,7 @@ def _ticket_strip(start: datetime, end: datetime) -> go.Figure:
 
 
 def render_timeline_page() -> None:
-    st.header("Fault Analysis")
+    st.header("Analytics")
     st.caption("Historical fault investigation across time, inverters, revenue impact, and incidents.")
 
     df = _load_errorcodes()

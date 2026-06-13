@@ -426,7 +426,7 @@ def render_digital_twin_page() -> None:
 
     # ── Drill-down ─────────────────────────────────────────────────────────────
     st.divider()
-    st.subheader("🔍 Drill into an inverter")
+    st.subheader("🔍 Look into an inverter")
     inv_options = [inv for inv, _, _ in LAYOUT]
     default_idx = inv_options.index(worst) if worst in inv_options else 0
 
