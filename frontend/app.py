@@ -47,13 +47,13 @@ if st.session_state.get("nav_to_chat"):
 else:
     default_page = "Digital Twin"
 
-pages = ["Digital Twin", "Fault Timeline", "Chat Assistant"]
+pages = ["Digital Twin", "Fault Analysis", "Chat Assistant"]
 page = st.sidebar.selectbox("Choose a page", pages, index=pages.index(default_page))
 
 if page == "Digital Twin":
     render_digital_twin_page()
 
-elif page == "Fault Timeline":
+elif page == "Fault Analysis":
     render_timeline_page()
 
 elif page == "Chat Assistant":

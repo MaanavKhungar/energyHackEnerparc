@@ -1,8 +1,12 @@
 import sys
+import base64
+import json
+import mimetypes
 from pathlib import Path
 from datetime import datetime
 
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
@@ -11,7 +15,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "data_prep"))
 from data_query_tool import _load_errorcodes, FAULT_STATE
 
-DATA_DIR = Path("/Users/krishnamavani/Documents/Energy Hackathon/Plant A (start here)")
+DATA_DIR = ROOT / "data" / "Plant A (start here)"
+VOICE_AUDIO_FILE = ROOT / "frontend" / "assets" / "inverter_voice.mp4"
 INV_KWP  = 30.6
 DAYTIME  = range(6, 20)  # hours where production is possible
 
@@ -257,6 +262,104 @@ def _timeline_selector(df: pd.DataFrame) -> go.Figure:
     return fig
 
 
+def _voice_audio_data_uri() -> str | None:
+    if not VOICE_AUDIO_FILE.exists():
+        return None
+
+    mime_type = mimetypes.guess_type(VOICE_AUDIO_FILE.name)[0] or "audio/mpeg"
+    audio_b64 = base64.b64encode(VOICE_AUDIO_FILE.read_bytes()).decode("ascii")
+    return f"data:{mime_type};base64,{audio_b64}"
+
+
+def _build_voice_spatial_html(scores: dict, max_val: float, metric: str, unit: str) -> str:
+    """Render the original Plotly spatial map and play recorded audio on click."""
+    fig = _build_spatial_fig(scores, max_val, metric, unit)
+    fig.update_layout(clickmode="event")
+    fig_html = fig.to_html(
+        include_plotlyjs=True,
+        full_html=False,
+        div_id="voice-spatial-plot",
+        config={"displayModeBar": False, "responsive": True},
+    )
+
+    inv_ids = json.dumps([inv_id for inv_id, _, _ in LAYOUT])
+    audio_src = json.dumps(_voice_audio_data_uri())
+
+    return f"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* {{ box-sizing: border-box; }}
+html, body {{
+  margin: 0;
+  padding: 0;
+  background: #0a0f1a;
+  color: #c9d1d9;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+}}
+#voice-spatial-plot {{ width: 100%; height: 560px; }}
+#voice-banner {{
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f172a;
+  border: 1px solid #3b82f6;
+  border-radius: 999px;
+  color: #93c5fd;
+  display: none;
+  font-size: 12px;
+  padding: 6px 18px;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 9999;
+}}
+</style>
+</head>
+<body>
+{fig_html}
+<audio id="voice-audio" preload="auto" src=""></audio>
+<div id="voice-banner">Playing: <span id="voice-name"></span></div>
+<script>
+const invIds = {inv_ids};
+const audioSrc = {audio_src};
+const plot = document.getElementById("voice-spatial-plot");
+const banner = document.getElementById("voice-banner");
+const bannerName = document.getElementById("voice-name");
+const audio = document.getElementById("voice-audio");
+
+function playVoice(invId) {{
+  bannerName.textContent = invId || "recorded voice";
+  banner.style.display = "block";
+
+  if (!audioSrc) {{
+    bannerName.textContent = "missing " + {json.dumps(str(VOICE_AUDIO_FILE.relative_to(ROOT)))};
+    return;
+  }}
+
+  audio.pause();
+  audio.src = audioSrc;
+  audio.currentTime = 0;
+  audio.onended = () => banner.style.display = "none";
+  audio.onerror = () => {{
+    bannerName.textContent = "audio failed to load";
+  }};
+  audio.play().catch(() => {{
+    bannerName.textContent = "click again to allow audio";
+  }});
+}}
+
+plot.on("plotly_click", event => {{
+  const point = event.points && event.points[0];
+  if (!point) return;
+  playVoice(invIds[point.pointIndex]);
+}});
+</script>
+</body>
+</html>"""
+
+
 def _legend_html() -> str:
     return """
     <div style='display:flex;gap:6px;align-items:center;font-size:12px;padding:8px 0'>
@@ -272,63 +375,20 @@ def _legend_html() -> str:
 # ── Page ───────────────────────────────────────────────────────────────────────
 
 def render_digital_twin_page() -> None:
-    st.header("🌿 Plant A — Digital Twin")
+    st.header("☀️ Plant A — Digital Twin")
+    st.caption("Recent operational state, inverter voice, and O&M decision support.")
 
     df = _load_errorcodes()
 
-    UNITS = {
-        "Fault hours":          "h",
-        "Revenue lost (€)":     "€",
-        "Fault events (trips)": "trips",
-    }
-
-    # ── Metric selector ────────────────────────────────────────────────────────
-    metric = st.radio(
-        "Colour by",
-        ["Fault hours", "Revenue lost (€)", "Fault events (trips)"],
-        horizontal=True,
-        help=(
-            "**Fault hours** — total time in fault state · maintenance priority\n\n"
-            "**Revenue lost** — € lost from daytime faults · financial priority\n\n"
-            "**Fault events** — number of trips · stability priority"
-        ),
-    )
-
-    # ── Timeline bar (Chrome DevTools style) ───────────────────────────────────
-    st.caption("📅 Drag the handles below to select your analysis window · zoom in/out to navigate")
-
-    timeline_fig = _timeline_selector(df)
-    timeline_event = st.plotly_chart(
-        timeline_fig,
-        use_container_width=True,
-        on_select="rerun",
-        key="timeline_selector",
-    )
-
-    # Parse selected range from the rangeslider / box-select
-    start_dt = pd.Timestamp("2023-01-01")
-    end_dt   = pd.Timestamp("2023-12-31")
-
-    try:
-        sel = timeline_event.get("selection", {})
-        if sel and sel.get("box"):
-            x_range = sel["box"][0].get("x", [])
-            if len(x_range) == 2:
-                start_dt = pd.Timestamp(x_range[0])
-                end_dt   = pd.Timestamp(x_range[1])
-        # Also read the xaxis range from relayout (rangeslider drag)
-        elif sel and sel.get("points"):
-            xs = [p["x"] for p in sel["points"]]
-            if xs:
-                start_dt = pd.Timestamp(min(xs))
-                end_dt   = pd.Timestamp(max(xs))
-    except Exception:
-        pass
+    metric = "Fault hours"
+    unit = "h"
+    end_dt = pd.Timestamp(df.index.max())
+    start_dt = end_dt - pd.Timedelta(days=7)
 
     # Show the selected window as a readable label
     days_selected = max((end_dt - start_dt).days, 1)
     st.markdown(
-        f"<div style='font-size:13px;color:#6b7a99;padding:2px 0 8px'>Selected: "
+        f"<div style='font-size:13px;color:#6b7a99;padding:2px 0 8px'>Operational window: "
         f"<b style='color:#c9d1d9'>{start_dt.strftime('%d %b %Y')}</b> → "
         f"<b style='color:#c9d1d9'>{end_dt.strftime('%d %b %Y')}</b> "
         f"({days_selected} days)</div>",
@@ -341,7 +401,6 @@ def render_digital_twin_page() -> None:
         scores = _compute_scores(window, metric)
 
     max_val  = max(scores.values()) if scores else 1
-    unit     = UNITS[metric]
 
     # ── KPIs ───────────────────────────────────────────────────────────────────
     total    = sum(scores.values())
@@ -351,24 +410,18 @@ def render_digital_twin_page() -> None:
     worst_v  = scores[worst]
 
     k1, k2, k3, k4 = st.columns(4)
-    k1.metric(f"Total {unit}", f"{total:,.1f}")
+    k1.metric("Recent fault hours", f"{total:,.1f}h")
     k2.metric("Critical inverters", n_crit, delta=f"{n_crit} need attention", delta_color="inverse")
     k3.metric("Clean inverters", n_clean)
-    k4.metric(f"Worst — {metric}", f"{worst.replace('INV ','')}  {worst_v:,.1f}{unit}")
+    k4.metric("Worst inverter", worst.replace("INV ", ""))
 
-    # ── Caption changes with metric ────────────────────────────────────────────
-    captions = {
-        "Fault hours":          "Size + colour = total hours in fault state · use this to prioritise maintenance",
-        "Revenue lost (€)":     "Size + colour = estimated revenue lost from daytime faults · tariff × energy lost",
-        "Fault events (trips)": "Size + colour = number of times the inverter tripped into fault · indicates instability",
-    }
-    st.caption(captions[metric])
+    st.caption("Size + colour = recent operational fault load · click an inverter to hear its recorded voice")
     st.markdown(_legend_html(), unsafe_allow_html=True)
 
-    # ── Spatial map ────────────────────────────────────────────────────────────
-    st.plotly_chart(
-        _build_spatial_fig(scores, max_val, metric, unit),
-        use_container_width=True,
+    # ── Spatial map (voice-enabled) ────────────────────────────────────────────
+    components.html(
+        _build_voice_spatial_html(scores, max_val, metric, unit),
+        height=620,
     )
 
     # ── Drill-down ─────────────────────────────────────────────────────────────
