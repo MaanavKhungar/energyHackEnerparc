@@ -5,3 +5,4 @@ pyarrow
 openpyxl
 pymupdf
 plotly
+numpy

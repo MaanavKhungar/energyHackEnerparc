@@ -16,7 +16,9 @@ from pathlib import Path
 import pandas as pd
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
-DATA_DIR = Path("/Users/krishnamavani/Documents/Energy Hackathon/Plant A (start here)")
+# Get project root directory (parent of data_prep)
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_DIR = PROJECT_ROOT / "data" / "Plant A (start here)"
 OUT_DIR = Path(__file__).parent
 CHUNKS_DIR = OUT_DIR / "chunks"
 CHUNKS_DIR.mkdir(parents=True, exist_ok=True)

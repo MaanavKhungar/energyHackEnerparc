@@ -24,11 +24,7 @@ def _load_all_chunks() -> str:
 
 
 def _load_plant_pdf() -> str:
-    pdf_path = Path(
-        "/Users/krishnamavani/Documents/Energy Hackathon"
-        "/Plant A (start here)"
-        "/(please read first) General information plant A.pdf"
-    )
+    pdf_path = ROOT / "data" / "Plant A (start here)" / "(please read first) General information plant A.pdf"
     if not pdf_path.exists():
         return ""
     doc = fitz.open(str(pdf_path))

@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from datetime import datetime
 from chat_logic import render_chat_page, render_chat_sidebar
+from plant_twin import render_plant_twin_page
 
 # Page configuration
 st.set_page_config(
@@ -17,7 +17,7 @@ st.markdown("---")
 st.sidebar.header("Navigation")
 page = st.sidebar.selectbox(
     "Choose a page",
-    ["Home", "Data Analysis", "Chat Assistant"]
+    ["Home", "Data Analysis", "Digital Twin", "Chat Assistant"]
 )
 
 # Main content based on page selection
@@ -54,6 +54,9 @@ elif page == "Data Analysis":
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         st.write(df)
+
+elif page == "Digital Twin":
+    render_plant_twin_page()
 
 elif page == "Chat Assistant":
     render_chat_page()

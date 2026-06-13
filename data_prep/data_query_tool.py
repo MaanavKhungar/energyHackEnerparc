@@ -15,7 +15,9 @@ from pathlib import Path
 import pandas as pd
 import json
 
-DATA_DIR = Path("/Users/krishnamavani/Documents/Energy Hackathon/Plant A (start here)")
+# Get project root directory (parent of data_prep)
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_DIR = PROJECT_ROOT / "data" / "Plant A (start here)"
 
 # ── Lazy-loaded DataFrames ─────────────────────────────────────────────────────
 _errorcodes_df: pd.DataFrame | None = None
@@ -204,6 +206,95 @@ def get_plant_downtime_events(
         "events": results,
         "count": len(results),
         "period": f"{start_date or 'all'} to {end_date or 'all'}",
+    }
+
+
+def get_plant_status_snapshot(recent_days: int = 14) -> dict:
+    """
+    Build a plant-wide inverter status snapshot for a digital twin view.
+
+    Status is derived from recent error events and operational state values:
+    - green: no recent issues and running/feed-in state
+    - yellow: recent warnings, derating, or sparse data
+    - red: fault state or sustained recent errors
+    """
+    df = _load_errorcodes()
+
+    error_cols = [c for c in df.columns if " / Error" in c]
+    state_cols = {c.replace(" / Operational State", ""): c for c in df.columns if " / Operational State" in c}
+
+    if len(df.index) == 0:
+        return {"as_of": None, "recent_days": recent_days, "summary": {}, "tiles": []}
+
+    latest_ts = pd.to_datetime(df.index.max(), errors="coerce")
+    if pd.isna(latest_ts):
+        cutoff = None
+        recent_df = df
+    else:
+        cutoff = latest_ts - pd.Timedelta(days=recent_days)
+        recent_df = df[df.index >= cutoff]
+
+    tiles = []
+    status_counts = {"green": 0, "yellow": 0, "red": 0}
+
+    for error_col in error_cols:
+        inverter_id = error_col.replace(" / Error", "").strip()
+        error_series = recent_df[error_col].dropna()
+        state_col = state_cols.get(inverter_id)
+        state_series = recent_df[state_col].dropna() if state_col and state_col in recent_df.columns else pd.Series(dtype="float64")
+
+        recent_error_events = int((error_series != 0).sum())
+        latest_error_code = None
+        if len(error_series) > 0:
+            try:
+                latest_error_code = int(error_series.iloc[-1])
+            except Exception:
+                latest_error_code = None
+
+        latest_state = None
+        if len(state_series) > 0:
+            try:
+                latest_state = int(state_series.iloc[-1])
+            except Exception:
+                latest_state = None
+
+        if latest_state == 455 or recent_error_events >= 6:
+            status = "red"
+        elif latest_state == 381 or recent_error_events > 0 or (latest_error_code not in (None, 0)):
+            status = "yellow"
+        else:
+            status = "green"
+
+        status_counts[status] += 1
+
+        last_seen = None
+        if len(error_series) > 0:
+            last_seen = error_series.index[-1]
+        elif len(state_series) > 0:
+            last_seen = state_series.index[-1]
+
+        tiles.append(
+            {
+                "inverter_id": inverter_id,
+                "status": status,
+                "recent_error_events": recent_error_events,
+                "latest_error_code": latest_error_code,
+                "latest_state": latest_state,
+                "last_seen": last_seen.isoformat() if hasattr(last_seen, "isoformat") else None,
+            }
+        )
+
+    return {
+        "as_of": latest_ts.isoformat() if hasattr(latest_ts, "isoformat") else None,
+        "recent_days": recent_days,
+        "cutoff": cutoff.isoformat() if hasattr(cutoff, "isoformat") else None,
+        "summary": {
+            "green": status_counts["green"],
+            "yellow": status_counts["yellow"],
+            "red": status_counts["red"],
+            "total": len(tiles),
+        },
+        "tiles": sorted(tiles, key=lambda item: item["inverter_id"]),
     }
 
 
