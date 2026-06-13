@@ -29,10 +29,25 @@ def _load_errorcodes() -> pd.DataFrame:
     if _errorcodes_df is None:
         print("[tool] Loading errorcodes parquet...")
         df = pd.read_parquet(DATA_DIR / "3. Errorcodes" / "errorcodes.parquet")
-        # Parse timestamp index
         df.index = pd.to_datetime(df.index, errors="coerce")
         _errorcodes_df = df
     return _errorcodes_df
+
+
+# Operational state values (from / Operational State columns):
+#   0 = Off / Night
+#   1 = Idle / Standby
+#   2 = Starting up
+#   3 = MPP tracking
+#   4 = Feed-in / Running normally  ← healthy
+#   5 = Derating (power limited)    ← degraded
+#   6 = Fault / Error               ← the real fault metric
+
+FAULT_STATE = 6  # inverter is in fault state
+
+def _fault_count(series: pd.Series) -> int:
+    """Count 5-min intervals where operational state = 6 (fault)."""
+    return int((series == FAULT_STATE).sum())
 
 
 def _load_tickets() -> dict:
@@ -55,47 +70,61 @@ def query_inverter_errors(
     error_code: int | None = None,
 ) -> dict:
     """
-    Return error counts for a specific inverter, optionally filtered by date range
-    and/or specific error code.
-
-    inverter_id: e.g. "INV 01.03.017"
-    start_date: "YYYY-MM-DD" or None
-    end_date: "YYYY-MM-DD" or None
-    error_code: integer error code or None (returns all non-zero errors)
+    Return fault intervals for a specific inverter using operational state = 6 (fault).
+    Also reports which error codes were active during fault periods.
     """
     df = _load_errorcodes()
-    col = f"{inverter_id} / Error"
-    if col not in df.columns:
-        # Try fuzzy match
-        matches = [c for c in df.columns if inverter_id.replace(" ", "") in c.replace(" ", "")]
-        if not matches:
-            return {"error": f"Inverter '{inverter_id}' not found. Available: {list(df.columns[:5])}..."}
-        col = matches[0]
 
-    series = df[col].dropna()
+    state_col = f"{inverter_id} / Operational State"
+    error_col = f"{inverter_id} / Error"
+
+    if state_col not in df.columns:
+        matches = [c for c in df.columns if inverter_id.replace(" ", "") in c.replace(" ", "") and "State" in c]
+        if not matches:
+            return {"error": f"Inverter '{inverter_id}' not found."}
+        state_col = matches[0]
+        error_col = state_col.replace("Operational State", "Error")
+
+    states = df[state_col].dropna()
+    errors = df[error_col].dropna() if error_col in df.columns else pd.Series(dtype=float)
 
     if start_date:
-        series = series[series.index >= pd.to_datetime(start_date)]
+        states = states[states.index >= pd.to_datetime(start_date)]
+        errors = errors[errors.index >= pd.to_datetime(start_date)] if len(errors) else errors
     if end_date:
-        series = series[series.index <= pd.to_datetime(end_date)]
+        states = states[states.index <= pd.to_datetime(end_date)]
+        errors = errors[errors.index <= pd.to_datetime(end_date)] if len(errors) else errors
+
+    fault_intervals = int((states == FAULT_STATE).sum())
+    fault_hours = round(fault_intervals * 5 / 60, 1)
+
+    # Error codes during fault periods
+    if len(errors):
+        fault_times = states[states == FAULT_STATE].index
+        fault_errors = errors.reindex(fault_times).dropna()
+        fault_errors = fault_errors[fault_errors != 0]
+        top_codes = fault_errors.value_counts().head(5).to_dict()
+        top_codes = {str(int(k)): int(v) for k, v in top_codes.items()}
+    else:
+        top_codes = {}
 
     if error_code is not None:
-        count = int((series == error_code).sum())
+        count = int((errors == error_code).sum()) if len(errors) else 0
         return {
             "inverter": inverter_id,
             "error_code": error_code,
-            "count": count,
+            "fault_intervals_with_code": count,
             "period": f"{start_date or 'start'} to {end_date or 'end'}",
         }
-    else:
-        non_zero = series[series != 0]
-        top = non_zero.value_counts().head(10).to_dict()
-        return {
-            "inverter": inverter_id,
-            "total_error_events": int(len(non_zero)),
-            "top_error_codes": {str(int(k)): int(v) for k, v in top.items()},
-            "period": f"{start_date or 'start'} to {end_date or 'end'}",
-        }
+
+    return {
+        "inverter": inverter_id,
+        "fault_intervals": fault_intervals,
+        "fault_hours": fault_hours,
+        "top_error_codes_during_faults": top_codes,
+        "period": f"{start_date or 'start'} to {end_date or 'end'}",
+        "note": "fault_intervals = 5-min periods where operational state=6 (fault)",
+    }
 
 
 def compare_inverters_by_errors(
@@ -104,27 +133,33 @@ def compare_inverters_by_errors(
     top_n: int = 10,
 ) -> dict:
     """
-    Rank all inverters by number of error events in a date range.
-    Returns the top_n worst performers.
+    Rank all inverters by fault time using operational state = 6 (fault).
+    This is the accurate fault metric — ignores sunrise/sunset status codes.
     """
     df = _load_errorcodes()
-    error_cols = [c for c in df.columns if "/ Error" in c]
+    state_cols = [c for c in df.columns if "/ Operational State" in c]
 
     if start_date:
         df = df[df.index >= pd.to_datetime(start_date)]
     if end_date:
         df = df[df.index <= pd.to_datetime(end_date)]
 
-    counts = (df[error_cols] != 0).sum().sort_values(ascending=False)
+    counts = (df[state_cols] == FAULT_STATE).sum().sort_values(ascending=False)
+    counts.index = [c.replace(" / Operational State", "") for c in counts.index]
     top = counts.head(top_n)
 
     return {
         "ranking": [
-            {"inverter": c.replace(" / Error", ""), "error_events": int(v)}
-            for c, v in top.items()
+            {
+                "inverter": inv,
+                "fault_intervals": int(v),
+                "fault_hours": round(int(v) * 5 / 60, 1),
+            }
+            for inv, v in top.items()
         ],
         "period": f"{start_date or 'all'} to {end_date or 'all'}",
-        "total_inverters_checked": len(error_cols),
+        "total_inverters_checked": len(state_cols),
+        "note": "Ranked by operational state=6 (fault) intervals, not raw error codes",
     }
 
 
