@@ -394,3 +394,125 @@ def render_digital_twin_page() -> None:
             st.session_state["pending_chat_question"] = question
             st.session_state["nav_to_chat"] = True
             st.info("✅ Question queued → navigate to Chat Assistant in the sidebar")
+
+    # ── Watt's Wrong O&M Analysis ─────────────────────────────────────────────────
+    st.divider()
+    st.subheader("🔧 Watt's Wrong O&M Analysis")
+    st.markdown("**Zone-level maintenance decision support** — Revenue impact, technical risk, and crew availability")
+
+    # Zone selector
+    zones = list(set(zone for _, zone, _ in LAYOUT))
+    zone_options = sorted(zones)
+
+    col_zone, col_period, col_analyze = st.columns([2, 2, 1])
+
+    with col_zone:
+        selected_zone = st.selectbox(
+            "Select zone for O&M analysis",
+            zone_options,
+            format_func=lambda x: f"Zone {x} ({len([inv for inv, zone, _ in LAYOUT if zone == x])} inverters)"
+        )
+
+    with col_period:
+        analysis_days = st.selectbox(
+            "Analysis period",
+            [7, 14, 30],
+            format_func=lambda x: f"Last {x} days",
+            index=0
+        )
+
+    with col_analyze:
+        st.markdown("<br>", unsafe_allow_html=True)
+        analyze_clicked = st.button("🔍 Analyze Zone", use_container_width=True, type="primary")
+
+    if analyze_clicked:
+        # Import the O&M agent
+        import sys
+        from pathlib import Path
+        sys.path.insert(0, str(Path(__file__).parent.parent))
+        from watts_wrong import WattsWrongAgent
+
+        from datetime import timedelta
+
+        # Calculate date range
+        end_date = end_dt.date()
+        start_date = end_date - timedelta(days=analysis_days)
+
+        with st.spinner(f"🔍 Running O&M analysis for zone {selected_zone}..."):
+            try:
+                agent = WattsWrongAgent()
+                result = agent.analyze_zone(selected_zone, str(start_date), str(end_date))
+
+                # Display results
+                st.success("✅ Analysis complete!")
+
+                # Key metrics
+                col1, col2, col3 = st.columns(3)
+
+                revenue = result['tool_results']['revenue']
+                risk = result['tool_results']['risk']
+                crew = result['tool_results']['crew']
+
+                with col1:
+                    st.metric(
+                        "Revenue Loss",
+                        f"€{revenue['euro_loss']:,.0f}",
+                        f"{revenue['lost_kwh']:,.0f} kWh lost"
+                    )
+
+                with col2:
+                    band_colors = {"red": "🔴", "amber": "🟡", "green": "🟢"}
+                    band_emoji = band_colors.get(risk['band'], "❓")
+                    st.metric(
+                        "Risk Score",
+                        f"{risk['severity_0_100']:.0f}/100 {band_emoji}",
+                        f"{len(risk['active_codes'])} error types"
+                    )
+
+                with col3:
+                    st.metric(
+                        "Crew Status",
+                        crew['available_crew'],
+                        crew['soonest_slot']
+                    )
+                    st.caption("🏗️ MOCK crew data")
+
+                # Decision
+                verdict = result['verdict']
+                decision_colors = {
+                    "do_nothing": ("🟢", "success"),
+                    "monitor": ("🟡", "warning"),
+                    "act": ("🔴", "error")
+                }
+                emoji, alert_type = decision_colors.get(verdict['decision'], ("❓", "info"))
+
+                st.markdown("### 🎯 O&M Decision")
+                getattr(st, alert_type)(
+                    f"{emoji} **{verdict['decision'].upper().replace('_', ' ')}** — {verdict['reasoning']}"
+                )
+
+                if verdict.get('dissent_note'):
+                    st.warning(f"⚠️ **Tension noted:** {verdict['dissent_note']}")
+
+                # Service ticket if needed
+                if verdict.get('draft_ticket'):
+                    st.markdown("### 📋 Draft Service Ticket")
+                    st.json(verdict['draft_ticket'])
+
+                # Tool traces (expandable)
+                with st.expander("📊 Detailed Analysis"):
+                    st.markdown("**Revenue Analysis:**")
+                    st.write(revenue['trace'])
+                    st.json(revenue)
+
+                    st.markdown("**Risk Assessment:**")
+                    st.write(risk['trace'])
+                    st.json(risk)
+
+                    st.markdown("**Crew Check:**")
+                    st.write(crew['trace'])
+                    st.json(crew)
+
+            except Exception as e:
+                st.error(f"❌ Analysis failed: {str(e)}")
+                st.exception(e)

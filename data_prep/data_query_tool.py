@@ -333,6 +333,209 @@ def get_plant_status_snapshot(recent_days: int = 14) -> dict:
     }
 
 
+# ── Watt's Wrong O&M Tools ────────────────────────────────────────────────────
+
+def analyze_revenue(zone_id: str, start_date: str, end_date: str) -> dict:
+    """
+    Analyze revenue losses from inverter faults in a zone.
+    Returns lost kWh, euro loss, and weekly run-rate.
+    """
+    # Zone mapping (based on your digital_twin.py layout)
+    ZONE_MAPPING = {
+        "A.019": ["INV 01.01.001", "INV 01.01.002", "INV 01.01.003", "INV 01.01.004", "INV 01.01.005", "INV 01.01.006", "INV 01.01.007"],
+        "A.014": ["INV 01.02.008", "INV 01.02.009", "INV 01.02.010", "INV 01.02.011", "INV 01.02.012", "INV 01.02.013", "INV 01.02.014"],
+        "A.010": ["INV 01.03.015", "INV 01.03.016", "INV 01.03.017", "INV 01.03.018", "INV 01.03.019", "INV 01.03.020", "INV 01.03.021"],
+        "A.007": ["INV 01.04.022", "INV 01.04.023", "INV 01.04.024", "INV 01.04.025", "INV 01.04.026", "INV 01.04.027", "INV 01.04.028"],
+        "A.004": ["INV 01.05.029", "INV 01.05.030", "INV 01.05.031", "INV 01.05.032", "INV 01.05.033", "INV 01.05.034", "INV 01.05.035"],
+        "B.018": ["INV 01.06.036", "INV 01.06.037", "INV 01.06.038", "INV 01.06.039", "INV 01.06.040", "INV 01.06.041", "INV 01.06.042", "INV 01.06.043"],
+        "B.013": ["INV 01.07.044", "INV 01.07.045", "INV 01.07.046", "INV 01.07.047", "INV 01.07.048", "INV 01.07.049", "INV 01.07.050", "INV 01.07.051"],
+        "B.008": ["INV 01.08.052", "INV 01.08.053", "INV 01.08.054", "INV 01.08.055", "INV 01.08.056", "INV 01.08.057", "INV 01.08.058", "INV 01.08.059"],
+        "B.003": ["INV 01.09.060", "INV 01.09.061", "INV 01.09.062", "INV 01.09.063", "INV 01.09.064", "INV 01.09.065"]
+    }
+
+    zone_inverters = ZONE_MAPPING.get(zone_id, [])
+    if not zone_inverters:
+        return {"error": f"Unknown zone: {zone_id}"}
+
+    # Calculate total fault hours across zone
+    total_fault_hours = 0
+    affected_inverters = 0
+
+    for inv_id in zone_inverters:
+        fault_data = query_inverter_errors(inv_id, start_date, end_date)
+        if 'fault_hours' in fault_data:
+            fault_hours = fault_data['fault_hours']
+            if fault_hours > 0:
+                total_fault_hours += fault_hours
+                affected_inverters += 1
+
+    # Revenue calculation (using your plant specs)
+    inverter_kwp = 30.6  # From your digital_twin.py
+    capacity_factor = 0.15  # Conservative for 24h periods
+
+    lost_kwh = total_fault_hours * inverter_kwp * capacity_factor
+
+    # Tariff calculation (simplified - could load from feed_in_tariffs.json)
+    tariff_ct_per_kwh = 15.0  # Average tariff
+    euro_loss = lost_kwh * tariff_ct_per_kwh / 100
+
+    # Check if period hits 2022 price spike
+    hit_2022_spike = ("2022" in start_date or "2022" in end_date)
+
+    # Weekly run-rate
+    import pandas as pd
+    days_in_period = (pd.to_datetime(end_date) - pd.to_datetime(start_date)).days or 1
+    euro_per_week = euro_loss * (7 / days_in_period)
+
+    return {
+        "zone_id": zone_id,
+        "inverters_checked": len(zone_inverters),
+        "affected_inverters": affected_inverters,
+        "total_fault_hours": round(total_fault_hours, 1),
+        "lost_kwh": round(lost_kwh, 0),
+        "euro_loss": round(euro_loss, 0),
+        "euro_per_week": round(euro_per_week, 0),
+        "hit_2022_spike": hit_2022_spike,
+        "tariff_used_ct_kwh": tariff_ct_per_kwh,
+        "trace": f"Revenue: €{euro_loss:.0f} loss from {lost_kwh:.0f} kWh ({total_fault_hours:.1f}h downtime across {affected_inverters}/{len(zone_inverters)} inverters)"
+    }
+
+
+def score_risk(zone_id: str, start_date: str, end_date: str) -> dict:
+    """
+    Score technical risk 0-100 based on active error codes and severity.
+    Returns severity score, risk band (red/amber/green), and active codes.
+    """
+    # Error criticality mapping (based on your error analysis)
+    ERROR_CRITICALITY = {
+        # Critical safety/hardware issues
+        655379: 90, 655637: 90, 655629: 85, 655639: 80,  # Isolation faults
+        851971: 95, 851969: 95,  # System errors
+        983300: 85, 983296: 80,  # Unknown critical codes
+
+        # Voltage/power issues
+        655632: 75, 655633: 75, 655361: 70, 655362: 70,
+        655374: 65, 655373: 65,
+
+        # Temperature issues
+        655618: 60, 655619: 60, 655620: 60, 655621: 60, 663565: 70,
+
+        # Communication issues
+        655648: 50, 655622: 55, 1048577: 45, 1048578: 45,
+
+        # Common operational (lower severity due to frequency)
+        655626: 30, 655616: 25, 655625: 35, 655624: 35,
+
+        # DC-link issues (common, lower severity)
+        655363: 20, 655364: 20, 655365: 25, 655366: 25,
+        655367: 30, 655368: 35, 655369: 25, 655370: 35,
+        655371: 30, 655372: 30,
+
+        # Normal states
+        4: 5, 2: 2, 1: 2, 0: 0
+    }
+
+    # Get zone inverters
+    zone_mapping = {
+        "A.019": ["INV 01.01.001", "INV 01.01.002", "INV 01.01.003", "INV 01.01.004", "INV 01.01.005", "INV 01.01.006", "INV 01.01.007"],
+        "A.014": ["INV 01.02.008", "INV 01.02.009", "INV 01.02.010", "INV 01.02.011", "INV 01.02.012", "INV 01.02.013", "INV 01.02.014"],
+        "A.010": ["INV 01.03.015", "INV 01.03.016", "INV 01.03.017", "INV 01.03.018", "INV 01.03.019", "INV 01.03.020", "INV 01.03.021"],
+        "A.007": ["INV 01.04.022", "INV 01.04.023", "INV 01.04.024", "INV 01.04.025", "INV 01.04.026", "INV 01.04.027", "INV 01.04.028"],
+        "A.004": ["INV 01.05.029", "INV 01.05.030", "INV 01.05.031", "INV 01.05.032", "INV 01.05.033", "INV 01.05.034", "INV 01.05.035"],
+        "B.018": ["INV 01.06.036", "INV 01.06.037", "INV 01.06.038", "INV 01.06.039", "INV 01.06.040", "INV 01.06.041", "INV 01.06.042", "INV 01.06.043"],
+        "B.013": ["INV 01.07.044", "INV 01.07.045", "INV 01.07.046", "INV 01.07.047", "INV 01.07.048", "INV 01.07.049", "INV 01.07.050", "INV 01.07.051"],
+        "B.008": ["INV 01.08.052", "INV 01.08.053", "INV 01.08.054", "INV 01.08.055", "INV 01.08.056", "INV 01.08.057", "INV 01.08.058", "INV 01.08.059"],
+        "B.003": ["INV 01.09.060", "INV 01.09.061", "INV 01.09.062", "INV 01.09.063", "INV 01.09.064", "INV 01.09.065"]
+    }
+
+    zone_inverters = zone_mapping.get(zone_id, [])
+    if not zone_inverters:
+        return {"error": f"Unknown zone: {zone_id}"}
+
+    # Calculate risk score
+    total_severity = 0
+    all_active_codes = set()
+    affected_inverters = 0
+
+    for inv_id in zone_inverters:
+        fault_data = query_inverter_errors(inv_id, start_date, end_date)
+        if 'top_error_codes_during_faults' in fault_data:
+            error_codes = fault_data['top_error_codes_during_faults']
+            if error_codes:
+                affected_inverters += 1
+                for code_str, frequency in error_codes.items():
+                    try:
+                        code = int(code_str)
+                        all_active_codes.add(code)
+                        criticality = ERROR_CRITICALITY.get(code, 40)  # Default medium
+                        # Weight by frequency and normalize
+                        total_severity += criticality * min(frequency / 10, 1.0)
+                    except ValueError:
+                        continue
+
+    # Normalize severity to 0-100
+    severity_0_100 = min(total_severity / len(zone_inverters), 100)
+
+    # Determine band
+    if severity_0_100 >= 70:
+        band = "red"
+    elif severity_0_100 >= 40:
+        band = "amber"
+    else:
+        band = "green"
+
+    # Simple trend analysis (could be enhanced)
+    trend = "stable"  # Would need time-series analysis to determine worsening/improving
+
+    formula = "Σ(criticality × frequency_weight) per inverter, normalized to 0-100"
+
+    return {
+        "zone_id": zone_id,
+        "severity_0_100": round(severity_0_100, 1),
+        "band": band,
+        "active_codes": sorted(list(all_active_codes)),
+        "affected_inverters": affected_inverters,
+        "total_inverters": len(zone_inverters),
+        "trend": trend,
+        "formula": formula,
+        "trace": f"Risk: {severity_0_100:.1f}/100 severity ({band}), {len(all_active_codes)} error types active across {affected_inverters}/{len(zone_inverters)} inverters"
+    }
+
+
+def check_crew(start_date: str, end_date: str) -> dict:
+    """
+    Check crew availability for maintenance work.
+    MOCK implementation - clearly labeled as stub.
+    """
+    import random
+    from datetime import datetime, timedelta
+
+    # Mock crew data
+    crews = ["Team_Alpha", "Team_Beta", "Team_Gamma"]
+
+    # Generate mock availability
+    start = datetime.fromisoformat(start_date)
+    available_dates = []
+
+    for i in range(1, 8):  # Next 7 days
+        date = start + timedelta(days=i)
+        if date.weekday() < 5:  # Weekdays only
+            available_dates.append(date.strftime("%Y-%m-%d %H:%M"))
+
+    soonest_slot = available_dates[0] if available_dates else "No slots available"
+    available_crew = random.choice(crews)
+
+    return {
+        "mock": True,
+        "crews": crews,
+        "available_crew": available_crew,
+        "soonest_slot": soonest_slot,
+        "available_slots": available_dates[:3],  # Next 3 available
+        "note": "MOCK DATA - Integration point for real crew scheduling system",
+        "trace": f"MOCK: Crew {available_crew} available {soonest_slot}"
+    }
+
+
 # ── Claude Tool Definitions ───────────────────────────────────────────────────
 
 TOOLS = [
@@ -427,6 +630,62 @@ TOOLS = [
             "required": [],
         },
     },
+    {
+        "name": "analyze_revenue",
+        "description": (
+            "Analyze revenue losses from inverter faults in a zone. "
+            "Returns financial impact including lost kWh, euro losses, and weekly run-rate. "
+            "Use when assessing economic impact of downtime or maintenance decisions."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "zone_id": {
+                    "type": "string",
+                    "description": "Zone identifier (A.019, A.014, A.010, A.007, A.004, B.018, B.013, B.008, B.003)",
+                },
+                "start_date": {"type": "string", "description": "Start date YYYY-MM-DD"},
+                "end_date": {"type": "string", "description": "End date YYYY-MM-DD"},
+            },
+            "required": ["zone_id", "start_date", "end_date"],
+        },
+    },
+    {
+        "name": "score_risk",
+        "description": (
+            "Score technical risk 0-100 based on active error codes and severity. "
+            "Returns risk band (red/amber/green), severity score, and active error codes. "
+            "Use when assessing technical criticality and maintenance urgency."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "zone_id": {
+                    "type": "string",
+                    "description": "Zone identifier (A.019, A.014, A.010, A.007, A.004, B.018, B.013, B.008, B.003)",
+                },
+                "start_date": {"type": "string", "description": "Start date YYYY-MM-DD"},
+                "end_date": {"type": "string", "description": "End date YYYY-MM-DD"},
+            },
+            "required": ["zone_id", "start_date", "end_date"],
+        },
+    },
+    {
+        "name": "check_crew",
+        "description": (
+            "Check crew availability for maintenance work. "
+            "Returns available crews and time slots for scheduling maintenance. "
+            "MOCK implementation - clearly labeled as stub for crew scheduling integration."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "start_date": {"type": "string", "description": "Start date YYYY-MM-DD"},
+                "end_date": {"type": "string", "description": "End date YYYY-MM-DD"},
+            },
+            "required": ["start_date", "end_date"],
+        },
+    },
 ]
 
 
@@ -437,6 +696,9 @@ def execute_tool(name: str, tool_input: dict) -> str:
         "compare_inverters_by_errors": compare_inverters_by_errors,
         "get_error_timeline": get_error_timeline,
         "get_plant_downtime_events": get_plant_downtime_events,
+        "analyze_revenue": analyze_revenue,
+        "score_risk": score_risk,
+        "check_crew": check_crew,
     }
     if name not in fn_map:
         return json.dumps({"error": f"Unknown tool: {name}"})
